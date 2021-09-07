@@ -25,7 +25,7 @@ class CreateRegisterKaryawansTable extends Migration
             $table->string('pend_terakhir');
             $table->string('filepdf');
             $table->string('screenshot');
-            $table->stirng('dapatinformasi');
+            $table->string('dapatinformasi');
             $table->string('bio');
             $table->timestamps();
         });

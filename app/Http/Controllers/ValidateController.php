@@ -6,9 +6,8 @@ use Illuminate\Http\Request;
 
 class ValidateController extends Controller
 {
-    public function index()
+    public function __invoke()
     {
-        return view('informations.index');
+        return view('validations.index');
     }
 }
-// Best of the number one

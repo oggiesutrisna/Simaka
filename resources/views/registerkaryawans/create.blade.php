@@ -121,18 +121,18 @@
                     <div class="col-sm-6">
                         <label>Upload file CV/Portfolio berupa .jpg atau .pdf </label>
                         <input type="file" name="filepdf" class="form-control" required>
-                        <p>*maksimal file : 4mb</p>
+                        <p>*maksimal ukuran file : 2 MB</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
                     <div class="form-group">
                         <label>Dapat informasi dari mana?</label>
-                        <select class="form-control" name="pend_terakhir" id="pend_terakhir" required>
+                        <select class="form-control" name="dapatinformasi" id="pend_terakhir" required>
                             <option value="Loker Bali"> Iklan Instagram Loker Bali </option>
                             <option value="Info Lowongan Bali"> Iklan Instagram Info Lowongan Bali </option>
                             <option value="Info Loker Bali"> Iklan Instagram Info Loker Bali </option>
-                            <option value="Unicare Hirings"> Langsung dari Unicare Jobs </option>
+                            <option value="Unicare Hirings"> Langsung dari Unicare Hiring </option>
                             <option value="Jobstreet">Iklan Jobstreet</option>
                             <option value="Jobs.id">Iklan Jobs.id</option>
                             <option value="Baliho">Baliho</option>
@@ -140,12 +140,11 @@
                         </select>
                     </div>
                 </div>
-
                     <div class="col-sm-6">
                         <div class="form-group">
                         <label>Upload screenshot informasi yang anda dapat</label>
                         <input type="file" enctype="multipart/form-data" name="screenshot" class="form-control" required>
-                        <p>*maksimal file : 4mb</p>
+                        <p>*maksimal ukuran file : 2mb</p>
                     </div>
                     </div>
                 </div>

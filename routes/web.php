@@ -26,4 +26,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('karyawans', KaryawanController::class);
 Route::resource('registerkaryawans', RegisterKaryawanController::class);
 
-Route::get('validate', [ValidateController::class, 'index'])->name('validate');
+Route::get('validations', [ValidateController::class, 'index'])->name('validation');

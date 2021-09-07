@@ -45,7 +45,7 @@ class RegisterKaryawanController extends Controller
     {
         RegisterKaryawan::create($request->all());
 
-        return redirect()->route('informations.index')->with('success', 'Data anda telah dikirimkan, mohon ditunggu info selanjutnya');
+        return redirect()->route('validations.index')->with('success', 'Data anda telah dikirimkan, mohon ditunggu info selanjutnya');
     }
 
     /**
