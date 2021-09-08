@@ -119,7 +119,7 @@
                         <input type="text" name="alamat" class="form-control" placeholder="ex: Los Angeles, CA" required>
                     </div>
                     <div class="col-sm-6">
-                        <label>Upload file CV/Portfolio berupa .jpg atau .pdf </label>
+                        <label>Upload file CV, Portfolio, dan STR berupa .jpg atau .pdf </label>
                         <input type="file" name="filepdf" class="form-control" required>
                         <p>*maksimal ukuran file : 2 MB</p>
                     </div>

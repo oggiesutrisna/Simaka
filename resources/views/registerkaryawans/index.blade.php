@@ -14,6 +14,8 @@
             <th>Nama Karyawan</th>
             <th>DateOfBirth</th>
             <th>Biografi Singkat</th>
+            <th>CV/STR/Portfolio</th>
+            <th>Screenshot bukti</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -24,6 +26,8 @@
                 <td>{{ $rk->name }}</td>
                 <td>{{ $rk->ttl }}</td>
                 <td>{{ $rk->bio }}</td>
+                <td>{{ $rk->filepdf</td>
+                <td>{{ $rk->screenshot</td>
                 <form action="{{route('registerkaryawans.destroy', $rk->id )}}" method="POST" id="form">
                   @csrf
                   @method('DELETE')
