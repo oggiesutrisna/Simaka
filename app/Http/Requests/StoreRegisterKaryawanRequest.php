@@ -30,10 +30,8 @@ class StoreRegisterKaryawanRequest extends FormRequest
             'alamat' => 'required|max:255 ',
             'notelp' => 'required|max:255 ',
             'pend_terakhir' => 'required|max:255',
-            'filepdf' => 'required|image|mimes:jpg,png,jpeg,pdf|max:2048',
             'bio' => 'required|max:255 ',
             'dapatinformasi' => 'required|max:255',
-            'screenshot' => 'required|image|mimes:jpg,png,jpeg,pdf|max:2048',
         ];
     }
 }

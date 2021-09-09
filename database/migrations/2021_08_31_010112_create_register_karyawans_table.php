@@ -27,6 +27,8 @@ class CreateRegisterKaryawansTable extends Migration
             $table->string('screenshot');
             $table->string('dapatinformasi');
             $table->string('bio');
+            $table->string('tempat');
+            $table->boolean('diterima')->default(0);
             $table->timestamps();
         });
     }

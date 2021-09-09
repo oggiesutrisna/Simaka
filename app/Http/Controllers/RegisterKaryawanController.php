@@ -45,7 +45,7 @@ class RegisterKaryawanController extends Controller
     {
         RegisterKaryawan::create($request->all());
 
-        return redirect()->route('validations.index')->with('success', 'Data anda telah dikirimkan, mohon ditunggu info selanjutnya');
+        return redirect()->route('validate')->with('success', 'Data anda telah dikirimkan, mohon ditunggu info selanjutnya');
     }
 
     /**
@@ -54,9 +54,9 @@ class RegisterKaryawanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(RegisterKaryawan $registerkaryawan)
     {
-        return view('registerkaryawans.show', compact('registerkaryawans'));
+        return view('registerkaryawans.show', compact('registerkaryawan'));
     }
 
     /**
@@ -65,7 +65,7 @@ class RegisterKaryawanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(RegisterKaryawan $registerkaryawans)
+    public function edit(RegisterKaryawan $registerkaryawan)
     {
         return view('registerkaryawans.edit', compact('registerkaryawans'));
     }
@@ -77,9 +77,9 @@ class RegisterKaryawanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateRegisterKaryawanRequest $request, RegisterKaryawan $registerkaryawan)
+    public function update(UpdateRegisterKaryawanRequest $request, RegisterKaryawan $registerkaryawans)
     {
-        $registerkaryawan->update($request->all());
+        $registerkaryawans->update($request->all());
         return redirect()->route('registerkaryawans.index')->with('success', 'data calon karyawan telah di update');
     }
 
@@ -89,13 +89,9 @@ class RegisterKaryawanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(RegisterKaryawan $registerkaryawan)
+    public function destroy(RegisterKaryawan $registerkaryawans)
     {
-        $registerkaryawan->delete();
+        $registerkaryawans->delete();
         return redirect()->route('registerkaryawans.index')->with('success', 'data karyawan telah di hapus');
-    }
-
-    public function uploadpdf(RegisterKaryawan $registerkaryawan) {
-
     }
 }

@@ -34,7 +34,9 @@
             <h1 class="display-5 fw-bold lh-1 mb-3">Come for the job, Stay for the Challenge.</h1>
             <p class="lead">Buat karir anda semakin maju dan berkembang bersama Unicare Clinic</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Daftar Sekarang!</button>
+          <a  class="btn btn-primary btn-lg px-4 me-md-2">Daftar Sekarang!</a>
+          <a  type="button" class="btn btn-outline-secondary btn-lg px-4">Cek bukaan terbaru</a>
+        </div>
             </div>
           </div>
         </div>

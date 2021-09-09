@@ -17,18 +17,18 @@
 <body class="hold-transition register-page">
     <div class="register-logo"> <br/>
         <a href="{{route('home')}}"><b>Unicare</b> Hirings</a>
-      </div>
+    </div>
     <div class="card card-body register-card-body card-outline card-primary">
         {{-- Error Span --}}
         @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
                 @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
+                <li>{{ $error }}</li>
                 @endforeach
             </ul>
         </div>
-    @endif
+        @endif
         {{-- End Error Span --}}
         <p class="login-box-msg">nb : Pastikan data yang anda isi sudah <b>tepat dan benar.</b></p>
         <!-- /.card-header -->
@@ -119,33 +119,33 @@
                         <input type="text" name="alamat" class="form-control" placeholder="ex: Los Angeles, CA" required>
                     </div>
                     <div class="col-sm-6">
-                        <label>Upload file CV, Portfolio, dan STR berupa .jpg atau .pdf </label>
+                        <label>Upload file CV & Portfolio / STR berupa .jpg atau .pdf </label>
                         <input type="file" name="filepdf" class="form-control" required>
                         <p>*maksimal ukuran file : 2 MB</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
-                    <div class="form-group">
-                        <label>Dapat informasi dari mana?</label>
-                        <select class="form-control" name="dapatinformasi" id="pend_terakhir" required>
-                            <option value="Loker Bali"> Iklan Instagram Loker Bali </option>
-                            <option value="Info Lowongan Bali"> Iklan Instagram Info Lowongan Bali </option>
-                            <option value="Info Loker Bali"> Iklan Instagram Info Loker Bali </option>
-                            <option value="Unicare Hirings"> Langsung dari Unicare Hiring </option>
-                            <option value="Jobstreet">Iklan Jobstreet</option>
-                            <option value="Jobs.id">Iklan Jobs.id</option>
-                            <option value="Baliho">Baliho</option>
-                            <option value="Videotron">Videotron</option>
-                        </select>
+                        <div class="form-group">
+                            <label>Dapat informasi dari mana?</label>
+                            <select class="form-control" name="dapatinformasi" id="pend_terakhir" required>
+                                <option value="Loker Bali"> Iklan Instagram Loker Bali </option>
+                                <option value="Info Lowongan Bali"> Iklan Instagram Info Lowongan Bali </option>
+                                <option value="Info Loker Bali"> Iklan Instagram Info Loker Bali </option>
+                                <option value="Unicare Hirings"> Langsung dari Unicare Hiring </option>
+                                <option value="Jobstreet">Iklan Jobstreet</option>
+                                <option value="Jobs.id">Iklan Jobs.id</option>
+                                <option value="Baliho">Baliho</option>
+                                <option value="Videotron">Videotron</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                        <label>Upload screenshot informasi yang anda dapat</label>
-                        <input type="file" enctype="multipart/form-data" name="screenshot" class="form-control" required>
-                        <p>*maksimal ukuran file : 2mb</p>
-                    </div>
+                            <label>Upload screenshot informasi yang anda dapat</label>
+                            <input type="file" enctype="multipart/form-data" name="screenshot" class="form-control" required>
+                            <p>*maksimal ukuran file : 2mb</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -153,18 +153,18 @@
                 <button type="submit" class="btn bg-gradient-primary">Daftar!</button>
             </div>
             <!-- input states -->
-    </div> <br />
-    <p>Copyright &copy; 2021 <a href="https://www.unicare-clinic.com">Unicare Clinic</a> | Built with 💖 by <a href="https://twitter.com/@oggiesutrisna">Oggie Sutrisna</a></p>
+        </div> <br />
+        <p>Copyright &copy; 2021 <a href="https://www.unicare-clinic.com">Unicare Clinic</a> | Built with 💖 by <a href="https://twitter.com/@oggiesutrisna">Oggie Sutrisna</a></p>
 
 
-<!-- jQuery -->
-<script src="{{asset('assets/plugins/jquery/jquery.min.js')}}"></script>
-<!-- Bootstrap 4 -->
-<script src="{{asset('assets/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-<!-- AdminLTE App -->
-<script src="{{asset('assets/js/adminlte.min.js')}}"></script>
-<script src="{{asset('assets/js/script.js')}}"></script>
-<script src="{{ asset('assets/plugins/dropzone/dropzone.js')}}"></script>
-<script src="{{ asset('assets/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
-</body>
-</html>
+        <!-- jQuery -->
+        <script src="{{asset('assets/plugins/jquery/jquery.min.js')}}"></script>
+        <!-- Bootstrap 4 -->
+        <script src="{{asset('assets/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <!-- AdminLTE App -->
+        <script src="{{asset('assets/js/adminlte.min.js')}}"></script>
+        <script src="{{asset('assets/js/script.js')}}"></script>
+        <script src="{{ asset('assets/plugins/dropzone/dropzone.js')}}"></script>
+        <script src="{{ asset('assets/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
+    </body>
+    </html>
