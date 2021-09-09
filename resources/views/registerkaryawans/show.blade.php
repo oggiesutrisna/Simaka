@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title') Profile Pelamar Karyawan @endsection
+@section('title') Profile Pelamar @endsection
 @section('content')
 
 <div class="row">
@@ -9,7 +9,9 @@
       <div class="card card-primary card-outline">
         <div class="card-body box-profile">
           <h3 class="profile-username text-center">{{$registerkaryawan->nama}}</h3>
-
+          <p class="text-muted text-center">
+              {{$registerkaryawan->posisi}}
+          </p>
         </div>
         <!-- /.card-body -->
       </div>

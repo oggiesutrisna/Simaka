@@ -26,7 +26,11 @@
           <td>{{ $rk->ttl }}</td>
           <td>{{ $rk->bio }}</td>
           <td>
-            belum = x icon merah , sudah = v icon hijau
+            @if ($rk->diterima == 0)
+                <i class="fas fa-close"></i>
+            @else
+            <i class="fas fa-open"></i>
+            @endif
           </td>
           <form action="{{route('registerkaryawans.destroy', $rk->id )}}" method="POST" id="form">
             @csrf
