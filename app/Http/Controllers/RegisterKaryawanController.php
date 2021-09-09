@@ -43,8 +43,14 @@ class RegisterKaryawanController extends Controller
      */
     public function store(StoreRegisterKaryawanRequest $request)
     {
-        RegisterKaryawan::create($request->all());
+        // menyimpan file uploads ke dalam direktori
+        $request->validate([
+            'filepdf' => 'required|mimes:pdf,jpg|max:2048',
+            'screenshot' => 'required|mimes:jpg,png,jpeg|max:2048',
+        ]);
 
+
+        RegisterKaryawan::create($request->all());
         return redirect()->route('validate')->with('success', 'Data anda telah dikirimkan, mohon ditunggu info selanjutnya');
     }
 
@@ -67,7 +73,7 @@ class RegisterKaryawanController extends Controller
      */
     public function edit(RegisterKaryawan $registerkaryawan)
     {
-        return view('registerkaryawans.edit', compact('registerkaryawans'));
+        return view('registerkaryawans.edit', compact('registerkaryawan'));
     }
 
     /**

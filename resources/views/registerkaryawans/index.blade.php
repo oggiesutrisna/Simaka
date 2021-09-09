@@ -26,11 +26,10 @@
           <td>{{ $rk->ttl }}</td>
           <td>{{ $rk->bio }}</td>
           <td>
-            @if ($rk->diterima == 0)
-                <i class="fas fa-close"></i>
-            @else
-            <i class="fas fa-open"></i>
-            @endif
+              <span class="badge badge-{{$rk->diterima === 'belum diterima' ? 'danger' : 'success'}} px-3 py-3" data-toggle="tooltip" data-placement="top" title="{{$rk->diterima}}">
+                <i class="fas {{$rk->diterima === 'belum diterima' ? 'fa-minus-circle' : 'fa-minus-circle'}}">
+                </i>
+            </span>
           </td>
           <form action="{{route('registerkaryawans.destroy', $rk->id )}}" method="POST" id="form">
             @csrf

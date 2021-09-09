@@ -12,6 +12,10 @@
           <p class="text-muted text-center">
               {{$registerkaryawan->posisi}}
           </p>
+          <p class="text-muted text-center">
+              {{$registerkaryawan->tempat}}
+          </p>
+          <a href="{{route('registerkaryawans.edit', $registerkaryawan->id)}}" class="btn btn-primary btn-block"><b>Edit</b></a>
         </div>
         <!-- /.card-body -->
       </div>
@@ -34,33 +38,33 @@
               <!-- Post -->
               <form class="form-horizontal">
                 <div class="form-group row">
-                  <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+                  <label for="nama" class="col-sm-2 col-form-label">Nama Lengkap</label>
                   <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputName" placeholder="Name" disabled>
+                    <input type="email" value="{{$registerkaryawan->nama}}" class="form-control" disabled>
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                  <label for="Email" class="col-sm-2 col-form-label">Email</label>
                   <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                    <input type="email" value="{{$registerkaryawan->email}}" class="form-control" id="inputEmail" disabled>
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="inputName2" class="col-sm-2 col-form-label">Name</label>
+                  <label for="inputName2" class="col-sm-2 col-form-label">Alamat</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputName2" placeholder="Name">
+                    <input type="text" value="{{$registerkaryawan->alamat}}" class="form-control" disabled>
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="inputExperience" class="col-sm-2 col-form-label">Experience</label>
+                  <label for="inputExperience" class="col-sm-2 col-form-label">Nomor Telepon Aktif</label>
                   <div class="col-sm-10">
-                    <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
+                      <input type="text" value="{{$registerkaryawan->notelp}}" class="form-control" disabled>
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="inputSkills" class="col-sm-2 col-form-label">Skills</label>
+                  <label for="pend_terakhir" class="col-sm-2 col-form-label">Pendidikan Terakhir</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
+                    <input type="text" class="form-control" value="{{$registerkaryawan->pend_terakhir}}" placeholder="Skills" disabled>
                   </div>
                 </div>
             </form>
@@ -70,11 +74,11 @@
               <!-- The timeline -->
               <div class="row mb-3">
                 <div class="col-sm-6">
-                  <img class="img-fluid" src="https://source.unsplash.com/random" alt="Photo">
+                  <img class="img-fluid" src="{{asset('uploads/') $rk->filepdf}}" alt="Photo">
                 </div>
                 <!-- /.col -->
                 <div class="col-sm-6">
-                    <img class="img-fluid" src=https://source.unsplash.com/random alt="Photo">
+                    <img class="img-fluid" src="https://source.unsplash.com/random" alt="Photo">
                   <!-- /.row -->
                 </div>
                 <!-- /.col -->
@@ -85,35 +89,29 @@
             <div class="tab-pane" id="status">
               <form class="form-horizontal">
                 <div class="form-group row">
-                  <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+                  <label for="bio" class="col-sm-2 col-form-label">Biografi Singkat</label>
                   <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputName" placeholder="Name">
+                    <input type="email" value="{{$registerkaryawan->bio}}" class="form-control" id="inputName" placeholder="Name" disabled>
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
-                  <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                    <label for="inputName" class="col-sm-2 col-form-label">Dapat Informasi</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="inputName" placeholder="Name" disabled>
+                    </div>
                   </div>
-                </div>
-                <div class="form-group row">
-                  <label for="inputName2" class="col-sm-2 col-form-label">Name</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputName2" placeholder="Name">
+                  <div class="form-group row">
+                    <label for="inputName" class="col-sm-2 col-form-label">Penempatan</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="inputName" placeholder="Name" disabled>
+                    </div>
                   </div>
-                </div>
-                <div class="form-group row">
-                  <label for="inputExperience" class="col-sm-2 col-form-label">Experience</label>
-                  <div class="col-sm-10">
-                    <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
+                  <div class="form-group row">
+                    <label for="diterima" class="col-sm-2 col-form-label">Diterima(?)</label>
+                    <div class="col-sm-10">
+                        <input value="{{$registerkaryawan->diterima}}" type="text" name="diterima" id="diterima" class="form-control" disabled>
+                    </div>
                   </div>
-                </div>
-                <div class="form-group row">
-                  <label for="inputSkills" class="col-sm-2 col-form-label">Skills</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
-                  </div>
-                </div>
               </form>
             </div>
             <!-- /.tab-pane -->
