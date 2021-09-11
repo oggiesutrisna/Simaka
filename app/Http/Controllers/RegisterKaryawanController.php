@@ -43,14 +43,18 @@ class RegisterKaryawanController extends Controller
      */
     public function store(StoreRegisterKaryawanRequest $request)
     {
-        // menyimpan file uploads ke dalam direktori
-        $request->validate([
-            'filepdf' => 'required|mimes:pdf,jpg|max:2048',
-            'screenshot' => 'required|mimes:jpg,png,jpeg|max:2048',
-        ]);
-
-
         RegisterKaryawan::create($request->all());
+
+        if ($request->hasFile('filepdf')) {
+            $fileupload = $request->file('filepdf');
+            $extension = $fileupload->getClientOriginalName();
+            $filename = time().'.'.$extension;
+            // $fileupload->storeAs('uploads/img/', $filename);
+            $path = $request->file('filepdf')->storeAs('public/uploads', $filename);
+        } else {
+            $filename = 'uploadregular.jpg';
+        }
+
         return redirect()->route('validate')->with('success', 'Data anda telah dikirimkan, mohon ditunggu info selanjutnya');
     }
 

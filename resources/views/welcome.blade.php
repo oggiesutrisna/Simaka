@@ -8,10 +8,11 @@
     <meta name="generator" content="Hugo 0.84.0">
     <title>Unicare Hirings</title>
 
-    <link rel="stylesheet" href="{{asset('assets-dj/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets-dj/css/bootstrap.min.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
 
   </head>
   <body>

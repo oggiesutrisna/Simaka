@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use App\Http\Controllers\RegisterKaryawanController;
 class StoreRegisterKaryawanRequest extends FormRequest
 {
     /**
@@ -28,6 +29,8 @@ class StoreRegisterKaryawanRequest extends FormRequest
             'posisi' => 'required|max:255 ',
             'email' => 'required|max:255 ',
             'alamat' => 'required|max:255 ',
+            'filepdf' => 'required|image|mimes:pdf,jpg,jpeg|max:2048',
+            'screenshot' => 'required|image|mimes:jpg,png,jpeg|max:2048',
             'notelp' => 'required|max:255 ',
             'pend_terakhir' => 'required|max:255',
             'bio' => 'required|max:255',

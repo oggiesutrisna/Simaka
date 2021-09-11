@@ -28,7 +28,7 @@
         <div class="card-header p-2">
           <ul class="nav nav-pills">
             <li class="nav-item"><a class="nav-link active" href="#biodata" data-toggle="tab">Biodata</a></li>
-            <li class="nav-item"><a class="nav-link" href="#uploads" data-toggle="tab">CV / STR / Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#uploads" data-toggle="tab">Attachments</a></li>
             <li class="nav-item"><a class="nav-link" href="#status" data-toggle="tab">Status</a></li>
           </ul>
         </div><!-- /.card-header -->
@@ -40,31 +40,31 @@
                 <div class="form-group row">
                   <label for="nama" class="col-sm-2 col-form-label">Nama Lengkap</label>
                   <div class="col-sm-10">
-                    <input type="email" value="{{$registerkaryawan->nama}}" class="form-control" disabled>
+                    <input type="email" value="{{ $registerkaryawan->nama }}" class="form-control" disabled>
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="Email" class="col-sm-2 col-form-label">Email</label>
                   <div class="col-sm-10">
-                    <input type="email" value="{{$registerkaryawan->email}}" class="form-control" id="inputEmail" disabled>
+                    <input type="email" value="{{ $registerkaryawan->email }}" class="form-control" id="inputEmail" disabled>
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="inputName2" class="col-sm-2 col-form-label">Alamat</label>
                   <div class="col-sm-10">
-                    <input type="text" value="{{$registerkaryawan->alamat}}" class="form-control" disabled>
+                    <input type="text" value="{{ $registerkaryawan->alamat }}" class="form-control" disabled>
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="inputExperience" class="col-sm-2 col-form-label">Nomor Telepon Aktif</label>
                   <div class="col-sm-10">
-                      <input type="text" value="{{$registerkaryawan->notelp}}" class="form-control" disabled>
+                      <input type="text" value="{{ $registerkaryawan->notelp }}" class="form-control" disabled>
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="pend_terakhir" class="col-sm-2 col-form-label">Pendidikan Terakhir</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" value="{{$registerkaryawan->pend_terakhir}}" placeholder="Skills" disabled>
+                    <input type="text" class="form-control" value="{{ $registerkaryawan->pend_terakhir }}"  disabled>
                   </div>
                 </div>
             </form>
@@ -74,7 +74,7 @@
               <!-- The timeline -->
               <div class="row mb-3">
                 <div class="col-sm-6">
-                  <img class="img-fluid" src="{{asset('uploads/') $rk->filepdf}}" alt="Photo">
+                  <img class="img-fluid" src="{{ asset('storage/uploads' . $registerkaryawan->filepdf)}}" alt="Photo">
                 </div>
                 <!-- /.col -->
                 <div class="col-sm-6">

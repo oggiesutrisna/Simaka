@@ -120,7 +120,7 @@
                     </div>
                     <div class="col-sm-6">
                         <label>Upload file CV & Portfolio / STR berupa .jpg atau .pdf </label>
-                        <input type="file" name="filepdf" class="form-control" id="filepdf" required>
+                        <input type="file" name="filepdf" accept="image/jpg, image/jpeg, image/png, application/pdf" class="form-control" id="filepdf" required>
                         <p>*maksimal ukuran file : 2 MB</p>
                     </div>
                 </div>
@@ -143,7 +143,7 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Upload screenshot informasi yang anda dapat</label>
-                            <input type="file" id="screenshot" enctype="multipart/form-data" name="screenshot" class="form-control" required>
+                            <input type="file" accept="image/*" id="screenshot" name="screenshot" class="form-control" required>
                             <p>*maksimal ukuran file : 2mb</p>
                         </div>
                     </div>

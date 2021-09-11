@@ -14,6 +14,7 @@
           <th>Nama Karyawan</th>
           <th>Date Of Birth</th>
           <th>Biografi Singkat</th>
+          <th>CV</th>
           <th>Status</th>
           <th>Actions</th>
         </tr>
@@ -25,6 +26,7 @@
           <td>{{ $rk->nama }}</td>
           <td>{{ $rk->ttl }}</td>
           <td>{{ $rk->bio }}</td>
+          <td><img src="{{asset('public/uploads' . $rk->filepdf)}}" alt="Photo"></td>
           <td>
               <span class="badge badge-{{$rk->diterima === 'belum diterima' ? 'danger' : 'success'}} px-3 py-3" data-toggle="tooltip" data-placement="top" title="{{$rk->diterima}}">
                 <i class="fas {{$rk->diterima === 'belum diterima' ? 'fa-minus-circle' : 'fa-minus-circle'}}">
