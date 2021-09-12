@@ -2,6 +2,17 @@
 @section('title') Edit Calon Karyawan @endsection
 @section('content')
 <div class="card card-primary">
+    <div class="card-header">
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    </div>
     <!-- /.card-header -->
     <form action="{{ route('registerkaryawans.update', $registerkaryawan->id) }}" method="POST">
         @csrf
@@ -9,7 +20,7 @@
         <div class="card-body">
             <div class="form-group">
                 <label>Nama Karyawan</label>
-                <input type="text" name="nama" value="{{$registerkaryawan->nama}}" class="form-control" disabled>
+                <input type="text" name="nama" value="{{ $registerkaryawan->nama }}" class="form-control" disabled>
             </div>
             <div class="row">
                 <div class="col-sm-6">
@@ -51,7 +62,7 @@
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label>No Telepon / No Whatsapp Aktif</label>
-                        <input type="text" name="notelp" class="form-control" placeholder="Nomor Whatsapp Aktif" disabled>
+                        <input type="text" value="{{ $registerkaryawan->notelp }}" name="notelp" class="form-control" placeholder="Nomor Whatsapp Aktif" disabled>
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -111,7 +122,7 @@
             </div>
             <div class="form-group">
                 <label>Alamat Lengkap</label>
-                <input type="text" name="alamat" value="{{$registerkaryawan->alamat}}" class="form-control" placeholder="ex: Hehe" disabled>
+                <input type="text" name="alamat" value="{{ $registerkaryawan->alamat }}" class="form-control" placeholder="ex: Hehe" disabled>
             </div>
         </div>
         <div class="card-footer">

@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Oggie Sutrisna">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Unicare Hirings</title>
+    <title>Welcome</title>
 
     <link rel="stylesheet" href="{{ asset('assets-dj/css/bootstrap.min.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -122,7 +122,7 @@
     >
       <!-- Left -->
       <div class="me-5 d-none d-lg-block">
-        <span>Pantengin terus sosial media kami. kabar loker di kami ya.</span>
+        <span>Pantengin terus, Unicare Clinic Hirings untuk dapatkan informasi bukaan di klinik kami. Kami tunggu kehadiran anda!</span>
       </div>
       <!-- Left -->
 
@@ -160,11 +160,10 @@
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
             <!-- Content -->
             <h6 class="text-uppercase fw-bold mb-4">
-              <i class="fas fa-gem me-3"></i>Company name
+              <i class="fas fa-gem me-3"></i>Well-Packaged by Unicare Clinic
             </h6>
             <p>
-              Here you can use rows and columns to organize your footer content. Lorem ipsum
-              dolor sit amet, consectetur adipisicing elit.
+              Unicare clinic is the most award-winning clinic ever made by Dr.Candra, the obseesion of the competitive clinic, Unicare Clinic offers the best prizes for you to take anything you want, especially, COVID-19.
             </p>
           </div>
           <!-- Grid column -->
@@ -173,19 +172,19 @@
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4">
-              Products
+              PRODUCTS
             </h6>
             <p>
-              <a href="#!" class="text-reset">Angular</a>
+              <a href="#!" class="text-reset">SWAB Antigen</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">React</a>
+              <a href="#!" class="text-reset">SWAB PCR Test</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Vue</a>
+              <a href="#!" class="text-reset">ALKES TOOLS</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Laravel</a>
+              <a href="#!" class="text-reset">EYE-Protections</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -194,19 +193,19 @@
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4">
-              Useful links
+              UNICARE SERVICES
             </h6>
             <p>
-              <a href="#!" class="text-reset">Pricing</a>
+              <a href="#!" class="text-reset">COVID-19 Testing</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Settings</a>
+              <a href="#!" class="text-reset">Alleviate Package</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Orders</a>
+              <a href="#!" class="text-reset">Drive Thru's</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Help</a>
+              <a href="#!" class="text-reset">CALL CENTERS</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -217,13 +216,13 @@
             <h6 class="text-uppercase fw-bold mb-4">
               Contact
             </h6>
-            <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+            <p><i class="fas fa-home me-3"></i> Unicare Uluwatu and Unicare Ubud </p>
             <p>
               <i class="fas fa-envelope me-3"></i>
-              info@example.com
+              info.unicareuluwatu@gmail.com
             </p>
-            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+            <p><i class="fas fa-phone me-3"></i> Nomor Telepon 1 </p>
+            <p><i class="fas fa-print me-3"></i> Nomor Telepon 2 </p>
           </div>
           <!-- Grid column -->
         </div>

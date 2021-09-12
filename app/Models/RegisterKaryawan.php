@@ -18,6 +18,8 @@ class RegisterKaryawan extends Model
         'pend_terakhir',
         'filepdf',
         'bio',
+        'diterima',
+        'tempat',
         'screenshot',
         'dapatinformasi',
     ];

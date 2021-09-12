@@ -18,9 +18,11 @@
 </head>
 <body class="hold-transition register page">
     <div class="card card-body register-card-body card-outline card-primary">
-        <h2 align="center">Success</h2>
+        <h2 align="center">Success!</h2>
         <hr />
         <h2 align="center">Your input has been recorded to our server, please wait for a moment for interview</h2>
+        <hr />
+        <h2 align="center">Pastikan nomor whatsapp anda sudah aktif agar kami bisa menghubungi anda untuk interview!</h2>
     </div>
 
 </body>

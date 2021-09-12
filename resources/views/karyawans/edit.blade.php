@@ -53,11 +53,11 @@
                     <div class="form-group">
                         <label>Posisi</label>
                         <select class="form-control" name="tempat">
-                            <option value="Hydro Canggu {{$karyawan->tempat === 'Hydro Canggu' ? 'selected' : ''}}">Hydromedical Canggu</option>
-                            <option value="Hydro Batubelig Baru {{$karyawan->tempat === 'Hydro Batubelig Baru' ? 'selected' : ''}}">Hydromedical Batubelig Baru</option>
-                            <option value="Unicare Uluwatu {{$karyawan->tempat === 'Unicare Uluwatu' ? 'selected' : ''}}">Unicare Uluwatu</option>
-                            <option value="Unicare Ubud {{$karyawan->tempat === 'Unicare Ubud' ? 'selected' : ''}}">Unicare Ubud</option>
-                            <option value="Head Office {{$karyawan->tempat === 'Head Office' ? 'selected' : ''}}">Head Office Hydro & Unicare </option>
+                            <option value="Hydro Canggu {{ $karyawan->tempat === 'Hydro Canggu' ? 'selected' : ''}}">Hydromedical Canggu</option>
+                            <option value="Hydro Batubelig Baru {{ $karyawan->tempat === 'Hydro Batubelig Baru' ? 'selected' : ''}}">Hydromedical Batubelig Baru</option>
+                            <option value="Unicare Uluwatu {{ $karyawan->tempat === 'Unicare Uluwatu' ? 'selected' : ''}}">Unicare Uluwatu</option>
+                            <option value="Unicare Ubud {{ $karyawan->tempat === 'Unicare Ubud' ? 'selected' : ''}}">Unicare Ubud</option>
+                            <option value="Head Office {{ $karyawan->tempat === 'Head Office' ? 'selected' : ''}}">Head Office Hydro & Unicare </option>
                         </select>
                     </div>
                 </div>

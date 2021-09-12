@@ -87,9 +87,9 @@ class RegisterKaryawanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateRegisterKaryawanRequest $request, RegisterKaryawan $registerkaryawans)
+    public function update(UpdateRegisterKaryawanRequest $request, RegisterKaryawan $registerkaryawan)
     {
-        $registerkaryawans->update($request->all());
+        $registerkaryawan->update($request->all());
         return redirect()->route('registerkaryawans.index')->with('success', 'data calon karyawan telah di update');
     }
 
@@ -99,9 +99,9 @@ class RegisterKaryawanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(RegisterKaryawan $registerkaryawans)
+    public function destroy(RegisterKaryawan $registerkaryawan)
     {
-        $registerkaryawans->delete();
+        $registerkaryawan->delete();
         return redirect()->route('registerkaryawans.index')->with('success', 'data karyawan telah di hapus');
     }
 }
