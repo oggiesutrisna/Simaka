@@ -4,6 +4,9 @@
 
 <div class="row">
     <div class="col-md-3">
+        <div class="card-header">
+            @include('partials.flash-message')
+        </div>
 
       <!-- Profile Image -->
       <div class="card card-primary card-outline">
@@ -97,13 +100,13 @@
                 <div class="form-group row">
                     <label for="inputName" class="col-sm-2 col-form-label">Dapat Informasi</label>
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputName" placeholder="Name" disabled>
+                      <input type="email" value="{{$registerkaryawan->dapatinformasi}}" class="form-control" id="inputName" placeholder="Name" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="inputName" class="col-sm-2 col-form-label">Penempatan</label>
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputName" placeholder="Name" disabled>
+                      <input type="email" class="form-control" value="{{$registerkaryawan->tempat}}" id="inputName" placeholder="Name" disabled>
                     </div>
                   </div>
                   <div class="form-group row">

@@ -23,8 +23,6 @@ class CreateRegisterKaryawansTable extends Migration
             $table->string('alamat');
             $table->string('notelp');
             $table->string('pend_terakhir');
-            $table->string('filepdf');
-            $table->string('screenshot')->nullable();
             $table->string('dapatinformasi');
             $table->string('bio');
             $table->string('tempat')->nullable();

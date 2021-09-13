@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreRegisterKaryawanRequest;
 use App\Http\Requests\UpdateRegisterKaryawanRequest;
 use App\Models\RegisterKaryawan;
+use Illuminate\Support\Facades\Storage;
 
 
 class RegisterKaryawanController extends Controller
@@ -90,7 +91,7 @@ class RegisterKaryawanController extends Controller
     public function update(UpdateRegisterKaryawanRequest $request, RegisterKaryawan $registerkaryawan)
     {
         $registerkaryawan->update($request->all());
-        return redirect()->route('registerkaryawans.index')->with('success', 'data calon karyawan telah di update');
+        return redirect()->route('registerkaryawans.show')->with('success', 'data calon karyawan telah di update');
     }
 
     /**
