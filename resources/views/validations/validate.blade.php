@@ -16,13 +16,18 @@
   <link rel="stylesheet" href="{{asset('assets/css/adminlte.min.css')}}">
   <link rel="stylesheet" href="{{asset('assets/plugins/sweetalert2/sweetalert2.min.css') }}">
 </head>
-<body class="hold-transition register page">
-    <div class="card card-body register-card-body card-outline card-primary">
-        <h2 align="center">Success!</h2>
-        <hr />
-        <h2 align="center">Your input has been recorded to our server, please wait for a moment for interview</h2>
-        <hr />
-        <h2 align="center">Pastikan nomor whatsapp anda sudah aktif agar kami bisa menghubungi anda untuk interview!</h2>
+<body class="register-page">
+    <img src=""
+    <div class="register-box">
+        <div class="card card-outline card-primary">
+            <p align="center">Success!</p>
+            <div class="card card-outline card-primary">
+                <p align="center">Your input has been recorded to our server, please wait for a moment for interview</p>
+            </div>
+            <div class="card card-outline card-primary">
+                <p align="center">Pastikan nomor whatsapp anda sudah aktif agar kami bisa menghubungi anda untuk interview!</p>
+            </div>
+        </div>
     </div>
 
 </body>

@@ -50,8 +50,7 @@ class RegisterKaryawanController extends Controller
             $fileupload = $request->file('filepdf');
             $extension = $fileupload->getClientOriginalName();
             $filename = time().'.'.$extension;
-            // $fileupload->storeAs('uploads/img/', $filename);
-            $path = $request->file('filepdf')->storeAs('public/uploads', $filename);
+            $path = $request->file('filepdf')->move('storage/uploads', $filename);
         } else {
             $filename = 'uploadregular.jpg';
         }
