@@ -17,15 +17,34 @@
   <link rel="stylesheet" href="{{asset('assets/plugins/sweetalert2/sweetalert2.min.css') }}">
 </head>
 <body class="register-page">
-    <img src=""
+    <img src="{{asset('assets-dj/img/unicare.png')}}" width="100px" height="100px"> <br />
     <div class="register-box">
         <div class="card card-outline card-primary">
-            <p align="center">Success!</p>
-            <div class="card card-outline card-primary">
-                <p align="center">Your input has been recorded to our server, please wait for a moment for interview</p>
+            <div class="card-header text-center">
+                <a href="https://www.unicare-clinic.com" class="h1">
+                    Success
+                </a>
             </div>
-            <div class="card card-outline card-primary">
-                <p align="center">Pastikan nomor whatsapp anda sudah aktif agar kami bisa menghubungi anda untuk interview!</p>
+            <div class="card-body">
+                <p>
+                    You're now have one step ahead to be our Family
+                </p>
+                <p>
+                    Pastikan nomor whatsapp anda sudah aktif.
+                </p>
+                <p>
+                    Agar kami bisa menghubungi anda untuk interview :)
+                </p>
+                <div class="social-auth-links text-center">
+                    <a href="{{route('registerkaryawans.create')}}" class="btn btn-block btn-success">
+                        Daftar lagi
+                    </a>
+                </div>
+                <div class="social-auth-links text-center">
+                    <a href="/" class="btn btn-block btn-secondary">
+                        Kembali ke Home
+                    </a>
+                </div>
             </div>
         </div>
     </div>
