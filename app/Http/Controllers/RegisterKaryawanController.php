@@ -44,17 +44,31 @@ class RegisterKaryawanController extends Controller
      */
     public function store(StoreRegisterKaryawanRequest $request)
     {
-        RegisterKaryawan::create($request->all());
+        $validatedData = $request->validate([
+            'nama' => 'required|max:255 ',
+            'ttl' => 'required|max:255 ',
+            'gender' => 'required|max:255 ',
+            'posisi' => 'required|max:255 ',
+            'email' => 'required|max:255 ',
+            'alamat' => 'required|max:255 ',
+            'filepdf' => 'required|image|mimes:pdf,jpg,jpeg|max:2048',
+            'screenshot' => 'required|image|mimes:jpg,png,jpeg|max:2048',
+            'notelp' => 'required|max:255 ',
+            'pend_terakhir' => 'required|max:255',
+            'bio' => 'required|max:255',
+            'tempat' => 'max:255',
+            'dapatinformasi' => 'required|max:255',
+        ]);
 
-        if ($request->hasFile('filepdf')) {
-            $fileupload = $request->file('filepdf');
-            $extension = $fileupload->getClientOriginalName();
-            $filename = time().'.'.$extension;
-            $path = $request->file('filepdf')->move('storage/uploads', $filename);
-        } else {
-            $filename = 'uploadregular.jpg';
+        if ($request->file('filepdf')) {
+            $validatedData['filepdf'] = $request->file('filepdf')->store('images');
         }
 
+        if ($request->file('screenshot')) {
+            $validatedData['screenshot'] = $request->file('screenshot')->store('screenshot');
+        }
+
+        RegisterKaryawan::create($validatedData);
         return redirect()->route('validate')->with('success', 'Data anda telah dikirimkan, mohon ditunggu info selanjutnya');
     }
 

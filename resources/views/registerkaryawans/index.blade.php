@@ -26,7 +26,7 @@
           <td>{{ $rk->nama }}</td>
           <td>{{ $rk->ttl }}</td>
           <td>{{ $rk->bio }}</td>
-          <td><img src="{{asset('public/uploads' . $rk->filepdf)}}" alt="Photo"></td>
+          <td><img src="{{asset('storage/' .$rk->filepdf) }}" alt="Photo" width="200" height="200"></td>
           <td>
               <span class="badge badge-{{$rk->diterima === 'belum diterima' ? 'danger' : 'success'}} px-3 py-3" data-toggle="tooltip" data-placement="top" title="{{$rk->diterima}}">
                 <i class="fas {{$rk->diterima === 'belum diterima' ? 'fa-minus-circle' : 'fa-minus-circle'}}">

@@ -77,15 +77,16 @@
               <!-- The timeline -->
               <div class="row mb-3">
                 <div class="col-sm-6">
-                  <img class="img-fluid" src="{{ asset('storage/uploads' . $registerkaryawan->filepdf)}}" alt="Photo">
+                  <img class="img-fluid" src="{{asset('storage/' . $registerkaryawan->filepdf)}}" alt="Photo" width="500px" height="500px">
                 </div>
                 <!-- /.col -->
                 <div class="col-sm-6">
-                    <img class="img-fluid" src="https://source.unsplash.com/random" alt="Photo">
+                    <img class="img-fluid" src="{{asset('storage/' . $registerkaryawan->screenshot)}}" alt="Photo" width="500px" height="500px">
                   <!-- /.row -->
                 </div>
                 <!-- /.col -->
               </div>
+              <p>Klik kanan gambar untuk fullscreen.</p>
             </div>
             <!-- /.tab-pane -->
 
