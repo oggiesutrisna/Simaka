@@ -25,7 +25,7 @@ class CreateRegisterKaryawansTable extends Migration
             $table->string('pend_terakhir');
             $table->string('dapatinformasi');
             $table->string('bio');
-            $table->string('tempat')->nullable();
+            $table->string('tempat')->nullable()->default('belum penempatan');
             $table->string('diterima')->default('belum diterima');
             $table->timestamps();
         });

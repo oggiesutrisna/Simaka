@@ -22,6 +22,7 @@ class RegisterKaryawan extends Model
         'tempat',
         'screenshot',
         'dapatinformasi',
+        'fotodiri',
     ];
     use HasFactory;
 }

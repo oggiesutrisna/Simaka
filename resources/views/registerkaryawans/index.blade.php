@@ -14,7 +14,7 @@
           <th>Nama Karyawan</th>
           <th>Date Of Birth</th>
           <th>Biografi Singkat</th>
-          <th>CV</th>
+          <th>Penempatan</th>
           <th>Status</th>
           <th>Actions</th>
         </tr>
@@ -26,7 +26,7 @@
           <td>{{ $rk->nama }}</td>
           <td>{{ $rk->ttl }}</td>
           <td>{{ $rk->bio }}</td>
-          <td><img src="{{asset('storage/' .$rk->filepdf) }}" alt="Photo" width="200" height="200"></td>
+          <td>{{ $rk->penempatan }}</td>
           <td>
               <span class="badge badge-{{$rk->diterima === 'belum diterima' ? 'danger' : 'success'}} px-3 py-3" data-toggle="tooltip" data-placement="top" title="{{$rk->diterima}}">
                 <i class="fas {{$rk->diterima === 'belum diterima' ? 'fa-minus-circle' : 'fa-minus-circle'}}">
@@ -37,7 +37,7 @@
             @csrf
             @method('DELETE')
             <td>
-              <div class="btn-group-vertical">
+              <div class="btn-group">
                 <a href="{{route('registerkaryawans.show', $rk->id)}}" type="button" class="btn btn-primary">
                   <i class="fas fa-search"></i>
                   <a href="{{route('registerkaryawans.edit', $rk->id )}}" type="button" class="btn btn-warning"><i class="fas fa-edit"></i></a>

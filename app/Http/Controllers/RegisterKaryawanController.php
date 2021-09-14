@@ -17,7 +17,7 @@ class RegisterKaryawanController extends Controller
      */
     public function index()
     {
-        $registerkaryawans = RegisterKaryawan::orderBy('id', 'DESC')->paginate(5);
+        $registerkaryawans = RegisterKaryawan::orderBy('id', 'DESC')->paginate(15);
 
         if(request('search')) {
             $registerkaryawans->where('name' . 'like' , '%' . request('search') . '%');
@@ -58,6 +58,7 @@ class RegisterKaryawanController extends Controller
             'bio' => 'required|max:255',
             'tempat' => 'max:255',
             'dapatinformasi' => 'required|max:255',
+            'fotodiri' => 'required|mimes:pdf,jpg,jpeg|max:2048'
         ]);
 
         if ($request->file('filepdf')) {
@@ -66,6 +67,10 @@ class RegisterKaryawanController extends Controller
 
         if ($request->file('screenshot')) {
             $validatedData['screenshot'] = $request->file('screenshot')->store('screenshot');
+        }
+
+        if ($request->file('fotodiri')) {
+            $validatedData['fotodiri'] = $request->file('fotodiri')->store('fotodiri');
         }
 
         RegisterKaryawan::create($validatedData);

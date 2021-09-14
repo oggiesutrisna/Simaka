@@ -10,6 +10,9 @@
 
       <!-- Profile Image -->
       <div class="card card-primary card-outline">
+          <div class="card-body box-profile">
+              <img class="profile-user-img img-fluid img-circle" src="{{asset('storage/', $registerkaryawan->fotodiri)}}" alt="Photo">
+          </div>
         <div class="card-body box-profile">
           <h3 class="profile-username text-center">{{$registerkaryawan->nama}}</h3>
           <p class="text-muted text-center">

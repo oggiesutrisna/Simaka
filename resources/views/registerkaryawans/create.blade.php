@@ -148,6 +148,11 @@
                         </div>
                     </div>
                 </div>
+                <div class="form-group">
+                    <label>Upload Foto Diri</label>
+                    <input type="file" name="fotodiri" class="form-control" accept="image/*" id="screenshot" required>
+                    <p>*Maksimal ukuran file 2mb</p>
+                </div>
             </div>
             <div class="card-footer">
                 <button type="submit" class="btn bg-gradient-primary">Daftar!</button>
