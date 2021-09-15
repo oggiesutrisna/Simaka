@@ -4,10 +4,23 @@
 <div class="card">
   <div class="card-header">
     @include('partials.flash-message')
+    <div class="card-tools">
+        <div class="input-group input-group-sm" style="width: 150px;">
+            <form action="{{route('registerkaryawans.index')}}" method="GET" role="search">
+            <input type="text" name="search" class="form-control float-right" placeholder="Cari">
+
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-default">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+        </form>
+          </div>
+    </div>
   </div>
   <!-- /.card-header -->
-  <div class="card-body">
-    <table class="table table-bordered">
+  <div class="card-body table-responsive p-0">
+    <table class="table table-bordered table-hover text-nowrap">
       <thead>
         <tr>
           <th>#</th>
@@ -29,7 +42,7 @@
           <td>{{ $rk->tempat }}</td>
           <td>
               <span class="badge badge-{{ $rk->diterima === 'belum diterima' ? 'danger' : 'success'}} px-3 py-3" data-toggle="tooltip" data-placement="top" title="{{ $rk->diterima }}">
-                <i class="fas {{ $rk->diterima === 'belum diterima' ? 'fa-minus-circle' : 'fa-plus-circle'}}">
+                <i class="fas {{ $rk->diterima === 'belum diterima' ? 'fa-minus-circle' : 'fa-minus-circle'}}">
                 </i>
             </span>
           </td>

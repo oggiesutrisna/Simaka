@@ -15,15 +15,27 @@ class RegisterKaryawanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(RegisterKaryawan $request)
     {
-        $registerkaryawans = RegisterKaryawan::orderBy('id', 'DESC')->paginate(15);
+        $registerkaryawans = RegisterKaryawan::where([
+            ['nama', '!=', Null],
+            [function ($query) use ($request) {
+                if(($term = $request->term)) {
+                    $query->orWhere('nama', 'LIKE' , '%' . $term . '%')->get();
+                }
+            }]
+        ])->orderBy('id', 'desc')->paginate(15);
+        return view ('registerkaryawans.index', compact('registerkaryawans'))->with('i', (request()->input('page', 1) - 1) * 5);
 
-        if(request('search')) {
-            $registerkaryawans->where('name' . 'like' , '%' . request('search') . '%');
-        }
-
-        return view('registerkaryawans.index', compact('registerkaryawans'));
+        // Unique Problemo
+        // $registerkaryawans = RegisterKaryawan::orderBy('id', 'DESC')->paginate(15);
+        // if(request('search')) {
+        //     $registerkaryawans->where('name' , 'like' , '%' . request('search') . '%')
+        //                       ->orWhere('posisi', 'like', '%' . request('search') . '%');
+        // }
+        // return view('registerkaryawans.index', [
+        //     "nama" => $registerkaryawans->get()
+        // ]);
     }
 
     /**
