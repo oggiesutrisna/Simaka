@@ -18,7 +18,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="{{asset('assets/plugins/fontawesome-free/css/all.min.css')}}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('assets/css/adminlte.min.css')}}">
-  <link rel="stylesheet" href="{{ asset('assets/plugins/s493689weetalert2/sweetalert2.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/plugins/sweetalert2/sweetalert2.min.css') }}">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -81,8 +81,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- Bootstrap 4 -->
 <script src="{{asset('assets/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <!-- AdminLTE App -->
-<script src="{{asset('assets/js/adminlte.min.js')}}"></script>
-<script src="{{asset('assets/js/script.js')}}"></script>
+<script src="{{ asset('assets/js/adminlte.min.js')}}"></script>
+<script src="{{ asset('assets/js/script.js')}}"></script>
 <script src="{{ asset('assets/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
 <script src="{{ asset('assets/plugins/dropzone/dropzone.js')}}"></script>
 </body>

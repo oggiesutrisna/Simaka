@@ -24,7 +24,17 @@ class UpdateRegisterKaryawanRequest extends FormRequest
     public function rules()
     {
         return [
-
+            'nama' => 'max:255 ',
+            'ttl' => 'max:255 ',
+            'gender' => 'max:255 ',
+            'posisi' => 'max:255 ',
+            'email' => 'max:255 ',
+            'alamat' => 'max:255 ',
+            'notelp' => 'max:255 ',
+            'pend_terakhir' => 'max:255',
+            'bio' => 'max:255',
+            'tempat' => 'max:255',
+            'dapatinformasi' => 'max:255',
         ];
     }
 }

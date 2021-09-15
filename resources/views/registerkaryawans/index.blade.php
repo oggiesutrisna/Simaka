@@ -26,10 +26,10 @@
           <td>{{ $rk->nama }}</td>
           <td>{{ $rk->ttl }}</td>
           <td>{{ $rk->bio }}</td>
-          <td>{{ $rk->penempatan }}</td>
+          <td>{{ $rk->tempat }}</td>
           <td>
-              <span class="badge badge-{{$rk->diterima === 'belum diterima' ? 'danger' : 'success'}} px-3 py-3" data-toggle="tooltip" data-placement="top" title="{{$rk->diterima}}">
-                <i class="fas {{$rk->diterima === 'belum diterima' ? 'fa-minus-circle' : 'fa-minus-circle'}}">
+              <span class="badge badge-{{ $rk->diterima === 'belum diterima' ? 'danger' : 'success'}} px-3 py-3" data-toggle="tooltip" data-placement="top" title="{{ $rk->diterima }}">
+                <i class="fas {{ $rk->diterima === 'belum diterima' ? 'fa-minus-circle' : 'fa-plus-circle'}}">
                 </i>
             </span>
           </td>
@@ -38,9 +38,9 @@
             @method('DELETE')
             <td>
               <div class="btn-group">
-                <a href="{{route('registerkaryawans.show', $rk->id)}}" type="button" class="btn btn-primary">
+                <a href="{{ route('registerkaryawans.show', $rk->id) }}" type="button" class="btn btn-primary">
                   <i class="fas fa-search"></i>
-                  <a href="{{route('registerkaryawans.edit', $rk->id )}}" type="button" class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                  <a href="{{ route('registerkaryawans.edit', $rk->id ) }}" type="button" class="btn btn-warning"><i class="fas fa-edit"></i></a>
                   <button type="submit" class="btn btn-danger delete-button">
                     <i class="fas fa-trash"></i>
                   </button>

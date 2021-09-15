@@ -114,8 +114,9 @@
                     <div class="form-group">
                         <label>Diterima ?</label>
                         <select name="diterima" value="diterima" class="form-control">
-                            <option value="1">Diterima</option>
-                            <option value="0">Tidak Diterima</option>
+                            <option value="Belum Diterima" selected>Belum Diterima</option>
+                            <option value="Diterima">Diterima</option>
+                            <option value="Tidak Diterima">Tidak Diterima</option>
                         </select>
                     </div>
                 </div>

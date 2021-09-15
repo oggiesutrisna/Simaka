@@ -10,21 +10,31 @@
 
       <!-- Profile Image -->
       <div class="card card-primary card-outline">
-          <div class="card-body box-profile">
-              <img class="profile-user-img img-fluid img-circle" src="{{asset('storage/', $registerkaryawan->fotodiri)}}" alt="Photo">
-          </div>
         <div class="card-body box-profile">
-          <h3 class="profile-username text-center">{{$registerkaryawan->nama}}</h3>
-          <p class="text-muted text-center">
-              {{$registerkaryawan->posisi}}
-          </p>
-          <p class="text-muted text-center">
-              {{$registerkaryawan->tempat}}
-          </p>
-          <a href="{{route('registerkaryawans.edit', $registerkaryawan->id)}}" class="btn btn-primary btn-block"><b>Edit</b></a>
+            <div class="text-center">
+                <img class="profile-user-img img-fluid img-circle" src="{{asset('storage/'. $registerkaryawan->fotodiri)}}" alt="Foto Diri Pelamar" width="128" height="128">
+            </div>
+                <h3 class="profile-username text-center">{{$registerkaryawan->nama}}</h3>
+                <ul class="list-group list-group-unbordered mb-3">
+                    <li class="list-group-item">
+                        <b> Posisi : </b>
+                        <a class="float-right">{{$registerkaryawan->posisi}}</a>
+                    </li>
+                    <li class="list-group-item">
+                        <b> Status : </b>
+                        <a class="float-right">{{$registerkaryawan->diterima}}</a>
+                    </li>
+                    <li class="list-group-item">
+                        <b> Penempatan : </b>
+                        <a class="float-right">
+                            {{$registerkaryawan->tempat}}
+                        </a>
+                    </li>
+                </ul>
+                <a href="{{route('registerkaryawans.edit', $registerkaryawan->id)}}" class="btn btn-primary btn-block"><b>Edit</b></a>
+            </div>
         </div>
         <!-- /.card-body -->
-      </div>
       <!-- /.card -->
 
     </div>
@@ -80,11 +90,11 @@
               <!-- The timeline -->
               <div class="row mb-3">
                 <div class="col-sm-6">
-                  <img class="img-fluid" src="{{asset('storage/' . $registerkaryawan->filepdf)}}" alt="Photo" width="500px" height="500px">
+                  <img class="img-fluid" src="{{asset('storage/' . $registerkaryawan->filepdf)}}" alt="Photo" width="500" height="500">
                 </div>
                 <!-- /.col -->
                 <div class="col-sm-6">
-                    <img class="img-fluid" src="{{asset('storage/' . $registerkaryawan->screenshot)}}" alt="Photo" width="500px" height="500px">
+                    <img class="img-fluid" src="{{asset('storage/' . $registerkaryawan->screenshot)}}" alt="Photo" width="500" height="500">
                   <!-- /.row -->
                 </div>
                 <!-- /.col -->

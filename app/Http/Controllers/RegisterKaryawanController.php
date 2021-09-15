@@ -109,7 +109,7 @@ class RegisterKaryawanController extends Controller
     public function update(UpdateRegisterKaryawanRequest $request, RegisterKaryawan $registerkaryawan)
     {
         $registerkaryawan->update($request->all());
-        return redirect()->route('registerkaryawans.show')->with('success', 'data calon karyawan telah di update');
+        return redirect()->route('registerkaryawans.show', $registerkaryawan->id)->with('success', 'data calon karyawan telah di update');
     }
 
     /**
