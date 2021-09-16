@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\KaryawanController;
+use App\Http\Controllers\PostingController;
 use App\Http\Controllers\RegisterKaryawanController;
 use App\Http\Controllers\ValidateController;
 use Illuminate\Support\Facades\Route;
@@ -25,5 +26,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('karyawans', KaryawanController::class);
 Route::resource('registerkaryawans', RegisterKaryawanController::class);
+Route::resource('postings', PostingController::class);
 
 Route::get('validate', [ValidateController::class, 'submitRequest'])->name('validate');

@@ -19,6 +19,7 @@ class CreatePostingTable extends Migration
             $table->string('deskripsi');
             $table->string('tempat')->default('belum ada tempat');
             $table->string('kategori')->nullable();
+            $table->string('photo')->nullable();
             $table->timestamps();
         });
     }
