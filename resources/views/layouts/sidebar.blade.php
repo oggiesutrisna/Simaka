@@ -30,7 +30,7 @@
           </a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('postings.index')}}" class="nav-link {{request()->routeIs('postings.index') ? 'active' : '' }}">
                 <i class="nav-icon fas fa-plus-square"></i>
               <p>
                 Post Lowongan

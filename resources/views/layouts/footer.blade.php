@@ -4,5 +4,5 @@
       Full Version
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2012-2021 Developed with 💖 by <a href="https://twitter.com/@oggiesutrisna">Oggie Sutrisna</a>.</strong> All rights reserved.
+    <strong>&copy; 2012 - 2021 Extensia Creative Bali </strong> | Built with 💖 by <a href="https://twitter.com/@oggiesutrisna">Oggie Sutrisna</a>. All rights reserved.
   </footer>
