@@ -7,7 +7,7 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{asset('assets/plugins/fontawesome-free/css/all.min.css')}}">
   <!-- Theme style -->
@@ -37,7 +37,7 @@
             <div class="card-body">
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" name="email" class="form-control" placeholder="rahmatletsgo@haha.com" required>
+                    <input type="email" name="email" class="form-control" placeholder="namaemail@domain.com" required>
                 </div>
                 <div class="form-group">
                     <label>Nama Lengkap</label>
@@ -64,7 +64,7 @@
                                 <option value="Marketing">Marketing</option>
                                 <option value="Technician">Teknisi</option>
                                 <option value="Designer Grafis">Designer Grafis</option>
-                                <option value="Programmer">Programmer</option>
+                            <option value="Programmer">Programmer</option>
                             </select>
                         </div>
                     </div>

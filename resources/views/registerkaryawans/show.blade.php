@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title') Profile Pelamar @endsection
+@section('title') Status Pelamar @endsection
 @section('content')
 
 <div class="row">
@@ -14,20 +14,20 @@
             <div class="text-center">
                 <img class="profile-user-img img-fluid img-circle" src="{{asset('storage/'. $registerkaryawan->fotodiri)}}" alt="Foto Diri Pelamar" width="128" height="128">
             </div>
-                <h3 class="profile-username text-center">{{$registerkaryawan->nama}}</h3>
+                <h3 class="profile-username text-center">{{ $registerkaryawan->nama }}</h3>
                 <ul class="list-group list-group-unbordered mb-3">
                     <li class="list-group-item">
                         <b> Posisi : </b>
-                        <a class="float-right">{{$registerkaryawan->posisi}}</a>
+                        <a class="float-right">{{ $registerkaryawan->posisi }}</a>
                     </li>
                     <li class="list-group-item">
                         <b> Status : </b>
-                        <a class="float-right">{{$registerkaryawan->diterima}}</a>
+                        <a class="float-right">{{ $registerkaryawan->diterima }}</a>
                     </li>
                     <li class="list-group-item">
                         <b> Penempatan : </b>
                         <a class="float-right">
-                            {{$registerkaryawan->tempat}}
+                            {{ $registerkaryawan->tempat }}
                         </a>
                     </li>
                 </ul>
@@ -43,14 +43,15 @@
       <div class="card">
         <div class="card-header p-2">
           <ul class="nav nav-pills">
-            <li class="nav-item"><a class="nav-link active" href="#biodata" data-toggle="tab">Biodata</a></li>
-            <li class="nav-item"><a class="nav-link" href="#uploads" data-toggle="tab">Attachments</a></li>
-            <li class="nav-item"><a class="nav-link" href="#status" data-toggle="tab">Status</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#biodata" data-toggle="tab"> Biodata </a></li>
+            <li class="nav-item"><a class="nav-link" href="#uploads" data-toggle="tab"> Attachments </a></li>
+            <li class="nav-item"><a class="nav-link" href="#status" data-toggle="tab"> Status </a></li>
           </ul>
         </div><!-- /.card-header -->
         <div class="card-body">
           <div class="tab-content">
             <div class="tab-pane active" id="biodata">
+
               <!-- Post -->
               <form class="form-horizontal">
                 <div class="form-group row">
@@ -66,7 +67,7 @@
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="inputName2" class="col-sm-2 col-form-label">Alamat</label>
+                  <label for="Alamat" class="col-sm-2 col-form-label">Alamat</label>
                   <div class="col-sm-10">
                     <input type="text" value="{{ $registerkaryawan->alamat }}" class="form-control" disabled>
                   </div>
@@ -108,25 +109,25 @@
                 <div class="form-group row">
                   <label for="bio" class="col-sm-2 col-form-label">Biografi Singkat</label>
                   <div class="col-sm-10">
-                    <input type="email" value="{{$registerkaryawan->bio}}" class="form-control" id="inputName" placeholder="Name" disabled>
+                    <input type="email" value="{{ $registerkaryawan->bio }}" class="form-control" id="bio" placeholder="Name" disabled>
                   </div>
                 </div>
                 <div class="form-group row">
                     <label for="inputName" class="col-sm-2 col-form-label">Dapat Informasi</label>
                     <div class="col-sm-10">
-                      <input type="email" value="{{$registerkaryawan->dapatinformasi}}" class="form-control" id="inputName" placeholder="Name" disabled>
+                      <input type="email" value="{{ $registerkaryawan->dapatinformasi }}" class="form-control" id="dapatinformasi" placeholder="Name" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="inputName" class="col-sm-2 col-form-label">Penempatan</label>
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" value="{{$registerkaryawan->tempat}}" id="inputName" placeholder="Name" disabled>
+                      <input type="email" class="form-control" value="{{ $registerkaryawan->tempat }}" id="penempatan" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label for="diterima" class="col-sm-2 col-form-label">Diterima(?)</label>
+                    <label for="diterima" class="col-sm-2 col-form-label"> Diterima(?) </label>
                     <div class="col-sm-10">
-                        <input value="{{$registerkaryawan->diterima}}" type="text" name="diterima" id="diterima" class="form-control" disabled>
+                        <input value="{{ $registerkaryawan->diterima }}" type="text" name="diterima" id="diterima" class="form-control" disabled>
                     </div>
                   </div>
               </form>

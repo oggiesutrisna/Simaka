@@ -8,7 +8,6 @@
         <div class="input-group input-group-sm" style="width: 150px;">
             <form action="{{route('registerkaryawans.index')}}" method="GET" role="search">
             <input type="text" name="search" class="form-control float-right" placeholder="Cari">
-
             <div class="input-group-append">
               <button type="submit" class="btn btn-default">
                 <i class="fas fa-search"></i>
