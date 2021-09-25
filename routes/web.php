@@ -1,9 +1,12 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\PostingController;
 use App\Http\Controllers\RegisterKaryawanController;
 use App\Http\Controllers\ValidateController;
+use App\Http\Controllers\WelcomeController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,15 +20,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function() {
+    return view('registerkaryawans.create');
 });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Resource
+
 Route::resource('karyawans', KaryawanController::class);
 Route::resource('registerkaryawans', RegisterKaryawanController::class);
 Route::resource('postings', PostingController::class);
 
+// Get
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('validate', [ValidateController::class, 'submitRequest'])->name('validate');

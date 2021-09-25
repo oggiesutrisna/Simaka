@@ -130,6 +130,18 @@
                         <input value="{{ $registerkaryawan->diterima }}" type="text" name="diterima" id="diterima" class="form-control" disabled>
                     </div>
                   </div>
+                  <div class="form-group row">
+                    <label for="alasan" class="col-sm-2 col-form-label">Alasan belum/tidak diterima</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" value="{{ $registerkaryawan->alasan }}" id="alasan" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="waktu" class="col-sm-2 col-form-label">Waktu Bekerja</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" value="{{ $registerkaryawan->waktu }}" id="alasan" disabled>
+                    </div>
+                  </div>
               </form>
             </div>
             <!-- /.tab-pane -->

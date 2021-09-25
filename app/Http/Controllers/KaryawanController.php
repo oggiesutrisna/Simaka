@@ -15,7 +15,7 @@ class KaryawanController extends Controller
      */
     public function index()
     {
-        $karyawans = Karyawan::orderBy('id', 'DESC')->paginate(5);
+        $karyawans = Karyawan::orderBy('id', 'DESC')->paginate(10);
 
         if(request('search')) {
             $karyawans->where('title' . 'like' , '%' . request('search') . '%');
@@ -43,21 +43,6 @@ class KaryawanController extends Controller
     public function store(StoreKaryawanRequest $request)
     {
         Karyawan::create($request->all());
-        // fungsi untuk buat upload image
-        if($request->hasFile('filepdf')) {
-            foreach($request->file('filepdf') as $filepdf) {
-                $name = $filepdf->getClientOriginalName();
-                $filepdf->move(public_path().'/uploads/', $name);
-                $imgdata[] = $name;
-            };
-            if($request->hasFile('screenshot')) {
-                foreach($request->file('screenshot') as $ss) {
-                    $namess = $ss->getClientOriginalName();
-                    $ss->move(public_path().'/screenshots/', $namess);
-                    $imgdatascreenshot[] = $namess;
-                }
-            }
-        }
 
         return redirect()->route('karyawans.index')->with('success', 'Data Karyawan telah di ditambah ');
     }

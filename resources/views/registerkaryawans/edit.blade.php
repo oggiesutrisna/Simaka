@@ -122,6 +122,10 @@
                 </div>
             </div>
             <div class="form-group">
+                <label>Alasan diterima/tidak diterima</label>
+                <textarea type="text" value="{{ $registerkaryawan->alasan }}" name="alasan" class="form-control" rows="4" cols="50"></textarea>
+            </div>
+            <div class="form-group">
                 <label>Alamat Lengkap</label>
                 <input type="text" name="alamat" value="{{ $registerkaryawan->alamat }}" class="form-control" placeholder="ex: Hehe" disabled>
             </div>

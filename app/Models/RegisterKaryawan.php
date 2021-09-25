@@ -10,6 +10,7 @@ class RegisterKaryawan extends Model
     protected $fillable = [
         'nama',
         'ttl',
+        'waktu',
         'gender',
         'posisi',
         'email',
@@ -23,6 +24,7 @@ class RegisterKaryawan extends Model
         'screenshot',
         'dapatinformasi',
         'fotodiri',
+        'alasan',
     ];
     use HasFactory;
 }

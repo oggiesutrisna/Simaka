@@ -17,7 +17,8 @@ class CreatePostingTable extends Migration
             $table->id();
             $table->string('judul');
             $table->string('deskripsi');
-            $table->string('tempat')->default('belum ada tempat');
+            $table->string('tempat')->default('tempat??');
+            $table->string('requirements')->default('minimal d3 keperawatan');
             $table->string('kategori')->nullable();
             $table->string('photo')->nullable();
             $table->timestamps();
