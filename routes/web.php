@@ -1,11 +1,10 @@
 <?php
 
-use App\Http\Controllers\Auth\LoginController;
+
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\PostingController;
 use App\Http\Controllers\RegisterKaryawanController;
 use App\Http\Controllers\ValidateController;
-use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -28,9 +27,11 @@ Auth::routes();
 
 // Resource
 
-Route::resource('karyawans', KaryawanController::class);
+Route::prefix('auth')->group(function () {
+    Route::resource('postings', PostingController::class);
+    Route::resource('karyawans', KaryawanController::class);
+});
 Route::resource('registerkaryawans', RegisterKaryawanController::class);
-Route::resource('postings', PostingController::class);
 
 // Get
 

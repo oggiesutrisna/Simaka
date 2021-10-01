@@ -25,7 +25,7 @@
           <th>#</th>
           <th>Nama Karyawan</th>
           <th>Date Of Birth</th>
-          <th>Biografi Singkat</th>
+          <th>Email</th>
           <th>Penempatan</th>
           <th>Status</th>
           <th>Actions</th>
@@ -37,7 +37,7 @@
           <td>{{ $rk->id }}</td>
           <td>{{ $rk->nama }}</td>
           <td>{{ $rk->ttl }}</td>
-          <td>{{ $rk->bio }}</td>
+          <td>{{ $rk->email}} </td>
           <td>{{ $rk->tempat }}</td>
           <td>
               <span class="badge badge-{{ $rk->diterima === 'belum diterima' ? 'danger' : 'success'}} px-3 py-3" data-toggle="tooltip" data-placement="top" title="{{ $rk->diterima }}">

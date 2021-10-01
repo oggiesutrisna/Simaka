@@ -13,25 +13,32 @@
         </div>
     @endif
     </div>
-    <!-- /.card-header -->
     <form action="{{ route('registerkaryawans.update', $registerkaryawan->id) }}" method="POST">
         @csrf
         @method('PUT')
         <div class="card-body">
-            <div class="form-group">
-                <label>Nama Karyawan</label>
-                <input type="text" name="nama" value="{{ $registerkaryawan->nama }}" class="form-control" disabled>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" name="email" value="{{ $registerkaryawan->email }}" class="form-control" disabled>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Nama Karyawan</label>
+                        <input type="text" name="nama" value="{{ $registerkaryawan->nama }}" class="form-control" disabled>
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <div class="col-sm-6">
-                    <!-- text input -->
                     <div class="form-group">
                         <label>Tempat, Tanggal Lahir</label>
                         <input type="text" name="ttl" class="form-control" placeholder="Tempat, DD/MM/YYYY" value="{{$registerkaryawan->ttl}}" disabled>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <!-- text input -->
                     <div class="form-group">
                         <label>Posisi Melamar</label>
                         <select class="form-control" name="posisi" disabled>
@@ -50,7 +57,6 @@
             </div>
             <div class="row">
                 <div class="col-sm-6">
-                    <!-- textarea -->
                     <div class="form-group">
                         <label>Jenis Kelamin</label>
                         <select class="form-control" name="gender" disabled>
@@ -85,7 +91,6 @@
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <!-- textarea -->
                     <div class="form-group">
                         <label>Penempatan</label>
                         <select class="form-control" name="tempat">
@@ -103,14 +108,12 @@
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <!-- textarea -->
                     <div class="form-group">
                         <label>Dapat Informasi</label>
-                        <input type="text" name="dapatinformasi" value="{{$registerkaryawan->dapatinformasi}}" class="form-control" disabled>
+                        <input type="text" name="dapatinformasi" value="{{ $registerkaryawan->dapatinformasi}}" class="form-control" disabled>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <!-- textarea -->
                     <div class="form-group">
                         <label>Diterima ?</label>
                         <select name="diterima" value="diterima" class="form-control">
@@ -120,21 +123,30 @@
                         </select>
                     </div>
                 </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Jadwal Interview</label>
+                        <input type="date" value="{{ $registerkaryawan->jadwal }}" name="jadwal" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label>Alamat Lengkap</label>
+                            <input type="text" name="alamat" value="{{ $registerkaryawan->alamat }}" class="form-control" placeholder="ex: Hehe" disabled>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="form-group">
                 <label>Alasan diterima/tidak diterima</label>
                 <textarea type="text" value="{{ $registerkaryawan->alasan }}" name="alasan" class="form-control" rows="4" cols="50"></textarea>
-            </div>
-            <div class="form-group">
-                <label>Alamat Lengkap</label>
-                <input type="text" name="alamat" value="{{ $registerkaryawan->alamat }}" class="form-control" placeholder="ex: Hehe" disabled>
             </div>
         </div>
         <div class="card-footer">
             <a href="{{ route('registerkaryawans.index') }}" class="btn btn-secondary">Kembali</a>
             <button type="submit" class="btn bg-gradient-primary">Update Data Calon Karyawan</button>
         </div>
-        <!-- input states -->
 </div>
 
 @endsection

@@ -19,12 +19,14 @@ class RegisterKaryawan extends Model
         'pend_terakhir',
         'filepdf',
         'bio',
+        'jadwal',
         'diterima',
         'tempat',
         'screenshot',
         'dapatinformasi',
         'fotodiri',
         'alasan',
+        'salary',
     ];
     use HasFactory;
 }

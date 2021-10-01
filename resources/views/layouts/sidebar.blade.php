@@ -30,35 +30,10 @@
           </a>
         </li>
         <li class="nav-item">
-            <a href="{{route('postings.index')}}" class="nav-link {{request()->routeIs('postings.index') ? 'active' : '' }}">
-                <i class="nav-icon fas fa-plus-square"></i>
-              <p>
-                Post Lowongan
-              </p>
-            </a>
-          </li>
-        <li class="nav-item">
-          <a href="{{route('karyawans.index')}}" class="nav-link {{request()->routeIs('karyawans.index') ? 'active' : '' }}">
-            <i class="nav-icon fas fa-sticky-note"></i>
-            <p>
-              Data Karyawan
-            </p>
-          </a>
-        </li>
-        <li class="nav-item">
           <a href="{{route('registerkaryawans.index')}}" class="nav-link {{request()->routeIs('registerkaryawans.index') ? 'active' : ''}}">
             <i class="nav-icon fas fa-users"></i>
             <p>
               Calon Karyawan
-            </p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-user-friends"></i>
-            <p>
-              Interviews
-              <span class="right badge badge-danger">New</span>
             </p>
           </a>
         </li>

@@ -34,11 +34,8 @@
                 <a href="{{route('registerkaryawans.edit', $registerkaryawan->id)}}" class="btn btn-primary btn-block"><b>Edit</b></a>
             </div>
         </div>
-        <!-- /.card-body -->
-      <!-- /.card -->
 
     </div>
-    <!-- /.col -->
     <div class="col-md-9">
       <div class="card">
         <div class="card-header p-2">
@@ -47,12 +44,9 @@
             <li class="nav-item"><a class="nav-link" href="#uploads" data-toggle="tab"> Attachments </a></li>
             <li class="nav-item"><a class="nav-link" href="#status" data-toggle="tab"> Status </a></li>
           </ul>
-        </div><!-- /.card-header -->
         <div class="card-body">
           <div class="tab-content">
             <div class="tab-pane active" id="biodata">
-
-              <!-- Post -->
               <form class="form-horizontal">
                 <div class="form-group row">
                   <label for="nama" class="col-sm-2 col-form-label">Nama Lengkap</label>
@@ -86,24 +80,17 @@
                 </div>
             </form>
             </div>
-            <!-- /.tab-pane -->
             <div class="tab-pane" id="uploads">
-              <!-- The timeline -->
               <div class="row mb-3">
                 <div class="col-sm-6">
                   <img class="img-fluid" src="{{asset('storage/' . $registerkaryawan->filepdf)}}" alt="Photo" width="500" height="500">
                 </div>
-                <!-- /.col -->
                 <div class="col-sm-6">
                     <img class="img-fluid" src="{{asset('storage/' . $registerkaryawan->screenshot)}}" alt="Photo" width="500" height="500">
-                  <!-- /.row -->
                 </div>
-                <!-- /.col -->
               </div>
               <p>Klik kanan gambar untuk fullscreen.</p>
             </div>
-            <!-- /.tab-pane -->
-
             <div class="tab-pane" id="status">
               <form class="form-horizontal">
                 <div class="form-group row">
@@ -125,21 +112,33 @@
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label for="diterima" class="col-sm-2 col-form-label"> Diterima(?) </label>
+                    <label for="diterima" class="col-sm-2 col-form-label"> Diterima(?)* </label>
                     <div class="col-sm-10">
                         <input value="{{ $registerkaryawan->diterima }}" type="text" name="diterima" id="diterima" class="form-control" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label for="alasan" class="col-sm-2 col-form-label">Alasan belum/tidak diterima</label>
+                    <label for="jadwal" class="col-sm-2 col-form-label"> Jadwal Interview* </label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" value="{{ $registerkaryawan->alasan }}" id="alasan" disabled>
+                        <input value="{{ $registerkaryawan->jadwal }}" type="text" name="jadwal" id="jadwal" class="form-control" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label for="waktu" class="col-sm-2 col-form-label">Waktu Bekerja</label>
+                    <label for="alasan" class="col-sm-2 col-form-label">Alasan belum/tidak diterima* </label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" value="{{ $registerkaryawan->waktu }}" id="alasan" disabled>
+                      <textarea type="text" class="form-control" id="alasan" col="2" rows="5" disabled>{{$registerkaryawan->alasan }}</textarea>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="waktu" class="col-sm-2 col-form-label">Waktu Bekerja*</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" value="{{ $registerkaryawan->waktu }}" id="waktu" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="salary" class="col-sm-2 col-form-label">Ekspetasi Salary*</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" value="{{ $registerkaryawan->salary }}" id="salary" disabled>
                     </div>
                   </div>
               </form>

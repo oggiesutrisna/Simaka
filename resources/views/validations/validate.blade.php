@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="{{asset('assets/plugins/sweetalert2/sweetalert2.min.css') }}">
 </head>
 <body class="register-page">
-    <img src="{{asset('assets-dj/img/unicare.png')}}" width="100px" height="100px"> <br />
+    <img src="{{asset('assets-dj/assets/img/oKUuTF4.png')}}" width="300px" height="100px"> <br />
     <div class="register-box">
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
