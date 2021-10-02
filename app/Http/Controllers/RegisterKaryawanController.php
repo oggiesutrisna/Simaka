@@ -41,21 +41,22 @@ class RegisterKaryawanController extends Controller
     public function store(StoreRegisterKaryawanRequest $request)
     {
         $validatedData = $request->validate([
-            'nama' => 'required|max:255 ',
-            'ttl' => 'required|max:255 ',
-            'gender' => 'required|max:255 ',
-            'posisi' => 'required|max:255 ',
-            'email' => 'required|max:255 ',
-            'alamat' => 'required|max:255 ',
-            'filepdf' => 'required|image|mimes:pdf,jpg,jpeg|max:2048',
-            'screenshot' => 'required|image|mimes:jpg,png,jpeg|max:2048',
-            'fotodiri' => 'required|mimes:pdf,jpg,jpeg|max:2048',
-            'notelp' => 'required|max:255 ',
-            'pend_terakhir' => 'required|max:255',
-            'bio' => 'required|max:255',
-            'tempat' => 'max:255',
-            'salary' => 'required|max:255',
-            'dapatinformasi' => 'required|max:255',
+            'nama'              => 'required|max:255 ',
+            'ttl'               => 'required|max:255 ',
+            'gender'            => 'required|max:255 ',
+            'posisi'            => 'required|max:255 ',
+            'email'             => 'required|max:255 ',
+            'alamat'            => 'required|max:255 ',
+            'filepdf'           => 'required|image|mimes:pdf,jpg,jpeg|max:2048',
+            'screenshot'        => 'required|image|mimes:jpg,png,jpeg|max:2048',
+            'fotodiri'          => 'required|mimes:pdf,jpg,jpeg|max:2048',
+            'notelp'            => 'required|max:255 ',
+            'pend_terakhir'     => 'required|max:255',
+            'bio'               => 'required|max:255',
+            'waktu'             => 'required|max:255',
+            'tempat'            => 'max:255',
+            'salary'            => 'required|max:255',
+            'dapatinformasi'    => 'required|max:255',
         ]);
 
         if ($request->file('filepdf')) {

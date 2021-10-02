@@ -189,9 +189,8 @@
             <div class="card-footer">
                 <button type="button" data-toggle="modal" data-target="#modal-default" class="btn bg-gradient-primary">Submit Lamaran Anda</button>
             </div>
-            <!-- input states -->
         </div> <br />
-        <p>Copyright &copy; 2021 <a href="https://www.unicare-clinic.com">Syntak Unicare</a> | Built with 💖 by <a href="https://twitter.com/@oggiesutrisna">Oggie Sutrisna</a></p>
+        <p>Copyright &copy; 2021 <a href="https://www.unicare-clinic.com">Syntak by Unicare</a> | Built with 💖 by <a href="https://twitter.com/@oggiesutrisna">Oggie Sutrisna</a></p>
 
         <div class="modal fade" id="modal-default" style="display: none;" aria-hidden="true">
             <div class="modal-dialog">
@@ -207,7 +206,7 @@
                   <p>1. Aplikasi ini adalah resmi dari <b>Syntak</b> oleh Unicare Clinic dibuat oleh <a href="https://twitter.com/@oggiesutrisna">Oggie Sutrisna</a></p>
                   <p>2. Semua file yang anda ajukan atau unggah ke aplikasi kami dijamin 100% aman dan telah di enkripsi. Kami pastikan data anda terjamin dan kami tidak akan mendistribusikan semua file apapun yang anda submit di aplikasi kami kemanapun.</p>
                   <p>3. Pastikan data yang diperlukan sudah lengkap agar anda cepat mudah mendapatkan interview.</p>
-                  <p>4. Pastikan anda telah memutar lagu LOCO dari ITZY, jika belum bisa di stream <a href="https://youtu.be/MjCZfZfucEc">DISINI</a> </p>
+                  <p>4. Pastikan anda telah memutar lagu LOCO dari ITZY, jika belum bisa di stream <a href="https://youtu.be/MjCZfZfucEc" target="_blank" rel="noopener noreferrer">DISINI</a></p>
                 </div>
                 <div class="modal-footer justify-content-between">
                   <button type="submit" aria-label="close" class="btn btn-primary">Submit Lamaran Anda</button>

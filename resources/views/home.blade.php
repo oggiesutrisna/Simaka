@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title') Dashboard Section @endsection
+@section('title') Dashboard @endsection
 @section('content')
 <div class="row">
   <div class="col-lg-3 col-6">
@@ -46,8 +46,8 @@
     <!-- small box -->
     <div class="small-box bg-danger">
       <div class="inner">
-        <h3>{{ $count = DB::table('karyawans')->count() }}</h3>
-        <p>Total Karyawan Aktif</p>
+        <h3>{{ $count = DB::table('karyawans')->where('belum diterima', 'diterima')->count()}}</h3>
+        <p>Total Karyawan telah diterima</p>
       </div>
       <div class="icon">
         <i class="ion ion-pie-graph"></i>
