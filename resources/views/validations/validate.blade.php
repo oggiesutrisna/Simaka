@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -10,9 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
-  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{asset('assets/plugins/fontawesome-free/css/all.min.css')}}">
-  <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('assets/css/adminlte.min.css')}}">
   <link rel="stylesheet" href="{{asset('assets/plugins/sweetalert2/sweetalert2.min.css') }}">
 </head>
@@ -35,14 +32,10 @@
                 <p>
                     Agar kami bisa menghubungi anda untuk interview :)
                 </p>
-                <div class="social-auth-links text-center">
-                    <a href="{{route('registerkaryawans.create')}}" class="btn btn-block btn-success">
-                        Daftar lagi
-                    </a>
-                </div>
-                <div class="social-auth-links text-center">
-                    <a href="/" class="btn btn-block btn-secondary">
-                        Kembali ke Home
+                <div class="social-auth-links text-center mt-2 mb-3">
+                    <a href="https://www.unicare-clinic.com" class="btn btn-block btn-primary">
+                        <i class="fas fa-home mr-2"></i>
+                        Kembali
                     </a>
                 </div>
             </div>

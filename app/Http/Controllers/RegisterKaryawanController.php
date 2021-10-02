@@ -49,13 +49,13 @@ class RegisterKaryawanController extends Controller
             'alamat' => 'required|max:255 ',
             'filepdf' => 'required|image|mimes:pdf,jpg,jpeg|max:2048',
             'screenshot' => 'required|image|mimes:jpg,png,jpeg|max:2048',
+            'fotodiri' => 'required|mimes:pdf,jpg,jpeg|max:2048',
             'notelp' => 'required|max:255 ',
             'pend_terakhir' => 'required|max:255',
             'bio' => 'required|max:255',
             'tempat' => 'max:255',
             'salary' => 'required|max:255',
             'dapatinformasi' => 'required|max:255',
-            'fotodiri' => 'required|mimes:pdf,jpg,jpeg|max:2048'
         ]);
 
         if ($request->file('filepdf')) {

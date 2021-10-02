@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="{{asset('assets/plugins/fontawesome-free/css/all.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/all.min.css')}}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('assets/css/adminlte.min.css')}}">
   <link rel="stylesheet" href="{{ asset('assets/plugins/sweetalert2/sweetalert2.min.css') }}">
@@ -60,18 +60,20 @@
                         <div class="form-group">
                             <label>Posisi Melamar *</label>
                             <select class="form-control" name="posisi">
-                                <option value="Dokter">Dokter</option>
-                                <option value="Dokter">Food & Beverages</option>
-                                <option value="Dokter">Front Office</option>
-                                <option value="Dokter">Videography</option>
-                                <option value="Perawat">Perawat</option>
-                                <option value="Finance">Finance</option>
-                                <option value="Cleaning Service">Cleaning Service</option>
+                                <option value="Apoteker">Apoteker</option>
+                                <option value="Asisten Apoteker">Asisten Apoteker</option>
                                 <option value="Call Center">Call Center</option>
-                                <option value="Marketing">Marketing</option>
-                                <option value="Technician">Technician</option>
+                                <option value="Cleaning Service">Cleaning Service</option>
                                 <option value="Designer Grafis">Designer Grafis</option>
+                                <option value="Dokter">Dokter</option>
+                                <option value="Food & Beverages">Food & Beverages</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Front Office">Front Office</option>
+                                <option value="Marketing">Marketing</option>
+                                <option value="Perawat">Perawat</option>
                                 <option value="Programmer">Programmer / Developer</option>
+                                <option value="Technician">Technician</option>
+                                <option value="Videography">Videography</option>
                             </select>
                         </div>
                     </div>
@@ -185,11 +187,11 @@
                 </div>
             </div>
             <div class="card-footer">
-                <button type="submit" class="btn bg-gradient-primary">Submit Lamaran Anda</button>
+                <button type="button" data-toggle="modal" data-target="#modal-default" class="btn bg-gradient-primary">Submit Lamaran Anda</button>
             </div>
             <!-- input states -->
         </div> <br />
-        <p>Copyright &copy; 2021 <a href="https://www.unicare-clinic.com">Syntak by Unicare Clinic</a> | Built with 💖 by <a href="https://twitter.com/@oggiesutrisna">Oggie Sutrisna</a></p>
+        <p>Copyright &copy; 2021 <a href="https://www.unicare-clinic.com">Syntak Unicare</a> | Built with 💖 by <a href="https://twitter.com/@oggiesutrisna">Oggie Sutrisna</a></p>
 
         <div class="modal fade" id="modal-default" style="display: none;" aria-hidden="true">
             <div class="modal-dialog">
@@ -197,16 +199,18 @@
                 <div class="modal-header">
                   <h4 class="modal-title">Decorous</h4>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
+                    <span aria-hidden="true">x</span>
                   </button>
                 </div>
                 <div class="modal-body">
-                  <p>1. Aplikasi ini adalah resmi dari Unicare Clinic dan berlisensi resmi oleh <b>Syntak.</b> dibuat oleh <a href="https://twitter.com/@oggiesutrisna">Oggie Sutrisna</a></p>
-                  <p>2. Semua file yang anda submit atau upload ke aplikasi kami dijamin 100% aman dan telah di enkripsi. Kami tidak mendistribusikan semua file apapun yang anda submit di aplikasi kami kemanapun.</p>
+                  <p>Sebelum anda mensubmit, ada baiknya anda membaca ketentuan dari kami terlebih dahulu</p>
+                  <p>1. Aplikasi ini adalah resmi dari <b>Syntak</b> oleh Unicare Clinic dibuat oleh <a href="https://twitter.com/@oggiesutrisna">Oggie Sutrisna</a></p>
+                  <p>2. Semua file yang anda ajukan atau unggah ke aplikasi kami dijamin 100% aman dan telah di enkripsi. Kami pastikan data anda terjamin dan kami tidak akan mendistribusikan semua file apapun yang anda submit di aplikasi kami kemanapun.</p>
                   <p>3. Pastikan data yang diperlukan sudah lengkap agar anda cepat mudah mendapatkan interview.</p>
+                  <p>4. Pastikan anda telah memutar lagu LOCO dari ITZY, jika belum bisa di stream <a href="https://youtu.be/MjCZfZfucEc">DISINI</a> </p>
                 </div>
                 <div class="modal-footer justify-content-between">
-                  <button type="button" aria-label="close" class="btn btn-primary">Lanjutkan</button>
+                  <button type="submit" aria-label="close" class="btn btn-primary">Submit Lamaran Anda</button>
                 </div>
               </div>
               <!-- /.modal-content -->
