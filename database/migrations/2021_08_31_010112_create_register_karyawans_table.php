@@ -31,6 +31,7 @@ class CreateRegisterKaryawansTable extends Migration
             $table->string('alasan')->default('belum ada alasan');
             $table->string('tempat')->default('belum penempatan');
             $table->string('diterima')->default('belum diterima');
+            $table->string('role')->nullable();
             $table->timestamps();
         });
     }

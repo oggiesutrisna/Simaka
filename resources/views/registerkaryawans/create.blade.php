@@ -7,11 +7,11 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/all.min.css')}}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{asset('assets/css/adminlte.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('assets/css/adminlte.min.css')}}">
   <link rel="stylesheet" href="{{ asset('assets/plugins/sweetalert2/sweetalert2.min.css') }}">
 </head>
 <body class="hold-transition register-page">
@@ -91,6 +91,7 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>No Telepon / No Whatsapp Aktif *</label>
+                            <code>nomor awal gunakan +62 ex. 087 jadi +6287</code>
                             <input type="text" name="notelp" class="form-control" placeholder="Nomor Whatsapp Aktif" required>
                         </div>
                     </div>
@@ -203,10 +204,10 @@
                 </div>
                 <div class="modal-body">
                   <p>Sebelum anda mensubmit, ada baiknya anda membaca ketentuan dari kami terlebih dahulu</p>
-                  <p>1. Aplikasi ini adalah resmi dari <b>Syntak</b> oleh Unicare Clinic dibuat oleh <a href="https://twitter.com/@oggiesutrisna">Oggie Sutrisna</a></p>
-                  <p>2. Semua file yang anda ajukan atau unggah ke aplikasi kami dijamin 100% aman dan telah di enkripsi. Kami pastikan data anda terjamin dan kami tidak akan mendistribusikan semua file apapun yang anda submit di aplikasi kami kemanapun.</p>
+                  <p>1. Aplikasi ini adalah resmi dari <b>Syntak</b> oleh Unicare Clinic dibuat oleh <a href="https://twitter.com/@oggiesutrisna">Oggie Sutrisna </a>Siapapun yang meniru, mengambil, mencuri, hacking, atau bypass yang membuat merugikan, kami tidak segan melapor ke pihak berwajib.</p>
+                  <p>2. Semua file yang anda ajukan atau unggah ke aplikasi kami dijamin 100% aman dan telah di enkripsi. Kami pastikan data anda terjamin dan kami tidak akan mendistribusikan semua file apapun yang anda submit di aplikasi kami kemanapun. Karena data anda adalah data privacy.</p>
                   <p>3. Pastikan data yang diperlukan sudah lengkap agar anda cepat mudah mendapatkan interview.</p>
-                  <p>4. Pastikan anda telah memutar lagu LOCO dari ITZY, jika belum bisa di stream <a href="https://youtu.be/MjCZfZfucEc" target="_blank" rel="noopener noreferrer">DISINI</a></p>
+                  <p>4. Pastikan di bagian <b>no telepon aktif</b>, gunakan <b>+628</b> diawal saat anda mencantumkan nomor telepon aktif anda.</p>
                 </div>
                 <div class="modal-footer justify-content-between">
                   <button type="submit" aria-label="close" class="btn btn-primary">Submit Lamaran Anda</button>

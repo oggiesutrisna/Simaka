@@ -46,7 +46,7 @@
     <!-- small box -->
     <div class="small-box bg-danger">
       <div class="inner">
-        <h3>{{ $count = DB::table('karyawans')->where('belum diterima', 'diterima')->count()}}</h3>
+        <h3>{{ $count = DB::table('register_karyawans')->where('diterima', 'diterima')->count()}}</h3>
         <p>Total Karyawan telah diterima</p>
       </div>
       <div class="icon">

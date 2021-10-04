@@ -10,12 +10,6 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="{{route('registerkaryawans.index')}}" class="nav-link">Calon Karyawan</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{route('karyawans.index')}}" class="nav-link">Data Karyawan</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{route('postings.create')}}" class="nav-link">Posting Lowongan</a>
-      </li>
     </ul>
 
     <!-- Right navbar links -->

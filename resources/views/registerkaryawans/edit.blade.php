@@ -69,6 +69,9 @@
                     <div class="form-group">
                         <label>No Telepon / No Whatsapp Aktif</label>
                         <input type="text" value="{{ $registerkaryawan->notelp }}" name="notelp" class="form-control" placeholder="Nomor Whatsapp Aktif" disabled>
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-whatsapp">
+                            Whatsapp
+                          </button>
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -148,5 +151,40 @@
             <button type="submit" class="btn bg-gradient-primary">Update Data Calon Karyawan</button>
         </div>
 </div>
+
+<div class="modal fade" id="modal-whatsapp" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Chat Generator</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <label>
+                Salin quote dibawah ini
+            </label>
+          <textarea cols="54" rows="10">Selamat pagi, apakah benar dengan nama, {{$registerkaryawan->nama}}? Perkenalkan, saya Ari dari HRD di Unicare Clinic menginformasikan bahwa anda akan diinterview pada tanggal {{$registerkaryawan->jadwal}}, untuk mengkonfirmasi bisa bilang HADIR. Terimakasih.
+          Regards
+          -Ari Darma,
+          Lead Human Resource Department @ Unicare Clinic-
+          </textarea>
+          <div class="form-group">
+              <label>
+                  Nomor Whatsapp Calon Kandidat
+              </label>
+              <input type="text" class="form-control form-control-border" id="exampleInputBorder" value="{{$registerkaryawan->notelp}}" placeholder="../../../" disabled>
+          </div>
+        </div>
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          <a href="https://api.whatsapp.com/send?phone={{$registerkaryawan->notelp}}" class="btn btn-success">Kirim Pesan</a>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
 
 @endsection

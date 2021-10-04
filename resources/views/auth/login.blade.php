@@ -14,9 +14,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
   <!-- Google Font: Source Sans Pro -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{asset('assets/plugins/fontawesome-free/css/all.min.css')}}">
   <!-- Theme style -->
@@ -32,7 +32,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <a href="{{route('home')}}" class="h1"><b>Login</b></a>
         </div>
         <div class="card-body">
-          <p class="login-box-msg">Experience is Experience</p>
+          <p class="login-box-msg">Experience is the best teacher</p>
 
           <form action="{{route('login')}}" method="POST">
             @csrf
@@ -67,7 +67,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="icheck-primary">
                   <input type="checkbox" id="remember">
                   <label for="remember">
-                    Verify
+                    Remember Me
                   </label>
                 </div>
               </div>
