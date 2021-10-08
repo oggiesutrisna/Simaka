@@ -95,18 +95,24 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label>Penempatan</label>
+                        <label>Rencana Penempatan</label>
                         <select class="form-control" name="tempat">
-                            <option value="Hydro Canggu">Hydromedical Canggu</option>
-                            <option value="Hydro Batubelig Baru">Hydromedical Batubelig Baru</option>
-                            <option value="Hydro Batubelig Lama">Unicare Tambolaka</option>
-                            <option value="Unicare Uluwatu">Unicare Uluwatu</option>
-                            <option value="Unicare Ubud">Unicare Ubud</option>
-                            <option value="Unicare Tambolaka">Unicare Tambolaka</option>
-                            <option value="Unicare Kupang">Unicare Kupang</option>
                             <option value="Head Office">Head Office Hydro & Unicare </option>
-                            <option value="Drive-Thru Kuta">Drive Thru Kuta </option>
-                            <option value="Drive-Thru Ramada">Drive Thru Ramada</option>
+                            <option value="Hydro Canggu">Klinik Hydromedical Canggu</option>
+                            <option value="Hydro Batubelig Baru">Klinik Hydromedical Batubelig Baru</option>
+                            <option value="Hydro Batubelig Lama">Klinik Unicare Tambolaka</option>
+                            <option value="Unicare Uluwatu">Klinik Unicare Uluwatu</option>
+                            <option value="Unicare Ubud">Klinik Unicare Ubud</option>
+                            <option value="Unicare Tambolaka">Klinik Unicare Tambolaka</option>
+                            <option value="Unicare Kupang">Klinik Unicare Kupang</option>
+                            <option value="Drive-Thru Central Parkir Kuta">[Drive Thru] Central Parkir Kuta </option>
+                            <option value="Unicare Ibis Petitenget">[Drive Thru] Unicare Drive Thru Ibis Petitenget</option>
+                            <option value="Unicare New Kuta Golf">[Drive Thru] Unicare Drive Thru New Kuta Golf</option>
+                            <option value="Unicare Villa Jerami">[Drive Thru] Unicare Drive Thru Villa Jerami</option>
+                            <option value="Unicare Central Parkir">[Drive Thru] Unicare Drive Thru Central Parkir</option>
+                            <option value="Unicare Drive Thru BSMC">[Drive Thru] Drive Thru BSMC </option>
+                            <option value="Unicare Drive Thru CHIS">[Drive Thru] Drive Thru CHIS </option>
+                            <option value="Unicare Drive Thru Padang Sambian">[Drive Thru] Drive Thru Padang Sambian </option>
                         </select>
                     </div>
                 </div>
@@ -119,7 +125,7 @@
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label>Diterima ?</label>
-                        <select name="diterima" value="diterima" class="form-control">
+                        <select name="diterima" value="diterima" class="form-control @if($errors->has('diterima')) is-invalid @endif">
                             <option value="Belum Diterima" selected>Belum Diterima</option>
                             <option value="Diterima">Diterima</option>
                             <option value="Tidak Diterima">Tidak Diterima</option>
@@ -129,7 +135,7 @@
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label>Jadwal Interview</label>
-                        <input type="date" value="{{ $registerkaryawan->jadwal }}" name="jadwal" class="form-control">
+                        <input type="date" value="{{ $registerkaryawan->jadwal }}" name="jadwal" class="form-control @if($errors->has('date')) is-invalid @endif">
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -143,7 +149,7 @@
             </div>
             <div class="form-group">
                 <label>Alasan diterima/tidak diterima</label>
-                <textarea type="text" value="{{ $registerkaryawan->alasan }}" name="alasan" class="form-control" rows="4" cols="50"></textarea>
+                <textarea type="text" value="{{ $registerkaryawan->alasan }}" name="alasan" class="form-control @if($errors->has('alasan')) is-invalid @endif" rows="4" cols="50"></textarea>
             </div>
         </div>
         <div class="card-footer">

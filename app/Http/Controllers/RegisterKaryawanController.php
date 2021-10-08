@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreRegisterKaryawanRequest;
 use App\Http\Requests\UpdateRegisterKaryawanRequest;
 use App\Models\RegisterKaryawan;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Storage;
 
 
 class RegisterKaryawanController extends Controller
@@ -18,8 +16,8 @@ class RegisterKaryawanController extends Controller
      */
     public function index(RegisterKaryawan $request)
     {
-        abort_if(! Auth::user()->name, 403);
-        $registerkaryawans = RegisterKaryawan::orderBy('id', 'DESC')->paginate(15);
+        // $registerkaryawans = RegisterKaryawan::paginate(10);
+        $registerkaryawans = RegisterKaryawan::orderBy('id', 'DESC')->paginate(5);
 
         return view('registerkaryawans.index', compact('registerkaryawans'));
     }

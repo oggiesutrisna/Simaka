@@ -1,10 +1,8 @@
 @extends('layouts.admin')
-
 @section('title') Dashboard @endsection
 @section('content')
 <div class="row">
   <div class="col-lg-3 col-6">
-    <!-- small box -->
     <div class="small-box bg-info">
       <div class="inner">
         <h3>{{$count = DB::table('karyawans')->count()}}</h3>
@@ -41,9 +39,7 @@
       </div>
     </div>
   </div>
-  <!-- ./col -->
   <div class="col-lg-3 col-6">
-    <!-- small box -->
     <div class="small-box bg-danger">
       <div class="inner">
         <h3>{{ $count = DB::table('register_karyawans')->where('diterima', 'diterima')->count()}}</h3>
@@ -54,7 +50,6 @@
       </div>
     </div>
   </div>
-  <!-- ./col -->
 </div>
 
 <div class="card">
@@ -62,7 +57,7 @@
     <h3> Selamat Datang </h3>
   </div>
   <div class="card-body">
-    Message from Developers: <b> Aplikasi ini masih tahap beta, mohon dibantu :)</b>
+      Message from developers to Everyone <b> Experience is the name everyone gives to their mistakes.</b>
   </div>
 </div>
 

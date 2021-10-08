@@ -6,8 +6,8 @@
   <title>Hirings Section</title>
   <!-- Google Font: Source Sans Pro -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/all.min.css')}}">
   <!-- Theme style -->
@@ -39,13 +39,13 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Email *</label>
-                            <input type="email" name="email" class="form-control" placeholder="namaemail@domain.com" required>
+                            <input type="email" name="email" class="form-control @if($errors->has('email')) is-invalid @endif " placeholder="namaemail@domain.com" required>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Nama Lengkap *</label>
-                            <input type="text" name="nama" class="form-control" placeholder="ex : Rahmat Letsgo" required>
+                            <input type="text" name="nama" class="form-control @if($errors->has('nama')) is-invalid @endif" placeholder="ex : Rahmat Letsgo" required>
                         </div>
                     </div>
                 </div>
@@ -53,23 +53,28 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Tempat, Tanggal Lahir *</label>
-                            <input type="text" name="ttl" class="form-control" placeholder="Tempat, DD/MM/YYYY" required>
+                            <input type="text" name="ttl" class="form-control @if($errors->has('ttl')) is-invalid @endif" placeholder="Tempat, DD/MM/YYYY" required>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Posisi Melamar *</label>
-                            <select class="form-control" name="posisi">
+                            <select class="form-control @if($errors->has('email')) is-invalid @endif" name="posisi" id="posisi">
+                                <option value="Admin">Admin</option>
+                                <option value="Accounting">Accounting</option>
                                 <option value="Apoteker">Apoteker</option>
                                 <option value="Asisten Apoteker">Asisten Apoteker</option>
+                                <option value="Business Development">Business Development</option>
                                 <option value="Call Center">Call Center</option>
                                 <option value="Cleaning Service">Cleaning Service</option>
                                 <option value="Designer Grafis">Designer Grafis</option>
+                                <option value="Driver">Driver</option>
                                 <option value="Dokter">Dokter</option>
                                 <option value="Food & Beverages">Food & Beverages</option>
                                 <option value="Finance">Finance</option>
                                 <option value="Front Office">Front Office</option>
-                                <option value="Marketing">Marketing</option>
+                                <option value="Marketing Offline">Marketing Offline</option>
+                                <option value="Marketing Online">Marketing Online</option>
                                 <option value="Perawat">Perawat</option>
                                 <option value="Programmer">Programmer / Developer</option>
                                 <option value="Technician">Technician</option>
@@ -82,7 +87,7 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Jenis Kelamin *</label>
-                            <select class="form-control" name="gender" required>
+                            <select class="form-control @if($errors->has('gender')) is-invalid @endif" name="gender" required>
                                 <option value="Laki-Laki">Laki-Laki</option>
                                 <option value="Perempuan">Perempuan</option>
                             </select>
@@ -91,14 +96,13 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>No Telepon / No Whatsapp Aktif *</label>
-                            <code>nomor awal gunakan +62 ex. 087 jadi +6287</code>
-                            <input type="text" name="notelp" class="form-control" placeholder="Nomor Whatsapp Aktif" required>
+                            <input type="text" name="notelp" class="form-control @if($errors->has('notelp')) is-invalid @endif" placeholder="Nomor Whatsapp Aktif" required>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Pendidikan Terakhir *</label>
-                            <select class="form-control" name="pend_terakhir" id="pend_terakhir" required>
+                            <select class="form-control @if($errors->has('pend_terakhir')) is-invalid @endif" name="pend_terakhir" id="pend_terakhir" required>
                                 <option value="SD"> SD </option>
                                 <option value="SMP"> SMP </option>
                                 <option value="SMA"> SMA </option>
@@ -109,32 +113,34 @@
                                 <option value="Sarjana 1"> Sarjana 1 </option>
                                 <option value="Sarjana 2"> Sarjana 2 </option>
                                 <option value="Sarjana 3"> Sarjana 3 </option>
+                                <option value="Doktor"> Doktor </option>
                             </select>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Deskripsikan diri anda secara singkat *</label>
-                            <input type="text" class="form-control" name="bio" placeholder="tell your story" required>
+                            <input type="text" class="form-control @if($errors->has('pend_terakhir')) is-invalid @endif" name="bio" placeholder="tell your story" required>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
                         <label>Alamat Lengkap Tempat Tinggal Sekarang *</label>
-                        <input type="text" name="alamat" class="form-control" placeholder="ex: Los Angeles, CA" required>
+                        <input type="text" name="alamat" class="form-control @if($errors->has('alamat')) is-invalid @endif" placeholder="ex: Los Angeles, CA" required>
                     </div>
                     <div class="col-sm-6">
                         <label>Upload file CV & Portfolio / STR berupa .jpg atau .pdf *</label>
-                        <input type="file" name="filepdf" accept="image/jpg, image/jpeg, image/png, application/pdf" class="form-control" id="filepdf" required>
+                        <input type="file" name="filepdf" accept="image/jpg, image/jpeg, image/png, application/pdf" class="form-control @if($errors->has('filepdf')) is-invalid @endif" id="filepdf" required>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Dapat informasi dari mana? *</label>
-                            <select class="form-control" name="dapatinformasi" id="dapatinformasi" required>
+                            <select class="form-control @if($errors->has('dapat_informasi')) is-invalid @endif" name="dapatinformasi" id="dapatinformasi" required>
                                 <option value="Loker Bali"> Iklan Instagram Loker Bali </option>
+                                <option value="Dapat dari teman"> Dapat informasi dari Teman </option>
                                 <option value="Info Lowongan Bali"> Iklan Instagram Info Lowongan Bali </option>
                                 <option value="Info Loker Bali"> Iklan Instagram Info Loker Bali </option>
                                 <option value="Unicare Hirings"> Langsung dari Unicare Hiring </option>
@@ -148,7 +154,7 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Upload screenshot informasi yang anda dapat*</label>
-                            <input type="file" accept="image/*" id="screenshot" name="screenshot" class="form-control" required>
+                            <input type="file" accept="image/*" id="screenshot" name="screenshot" class="form-control @if($errors->has('screenshot')) is-invalid @endif" required>
                         </div>
                     </div>
                 </div>
@@ -156,7 +162,7 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Pilihan Waktu Bekerja*</label>
-                            <select name="waktu" class="form-control" id="waktu" required>
+                            <select name="waktu" class="form-control @if($errors->has('waktu')) is-invalid @endif" id="waktu" required>
                                 <option value="Bekerja Penuh Waktu">Penuh Waktu</option>
                                 <option value="Magang">Magang</option>
                             </select>
@@ -165,13 +171,13 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Upload Foto Diri*</label>
-                            <input type="file" name="fotodiri" class="form-control" accept="image/*" id="screenshot" required>
+                            <input type="file" name="fotodiri" class="form-control @if($errors->has('fotodiri')) is-invalid @endif" accept="image/*" id="fotodiri" required>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Expectate Salary *</label>
-                            <select name="salary" id="salary" class="form-control" required>
+                            <select name="salary" id="salary" class="form-control @if($errors->has('salary')) is-invalid @endif" required>
                                 <option value="Rp. 1.000.000">Rp. 1.000.000,-</option>
                                 <option value="Rp. 1.500.000">Rp. 1.500.000,-</option>
                                 <option value="Rp. 2.000.000">Rp. 2.000.000,-</option>

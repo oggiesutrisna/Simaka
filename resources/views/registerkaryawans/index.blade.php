@@ -64,13 +64,18 @@
           <tr class="expandable-body">
             <td colspan="8">
               <p align="center">
-                Data pelamar belum ada, mungkin belum dibuat atau calon karyawan belum ada yang tertarik :(
+                Data pelamar belum ada, mungkin belum dibuat atau calon karyawan belum ada yang tertarik
               </p>
             </td>
           </tr>
           @endforelse
         </tbody>
       </table>
+      <div class="card-footer clearfix">
+        <ul class="pagination pagination-sm m-0 float-right">
+            {!! $registerkaryawans->links() !!}
+        </ul>
+      </div>
     </div>
     <!-- /.card-body -->
   </div>

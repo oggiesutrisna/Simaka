@@ -14,9 +14,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
   <!-- Google Font: Source Sans Pro -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">  
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{asset('assets/plugins/fontawesome-free/css/all.min.css')}}">
   <!-- Theme style -->
@@ -33,32 +33,29 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </div>
         <div class="card-body">
           <p class="login-box-msg">Experience is the best teacher</p>
+          <p class="login-box-msg">
+            @error('email')
+            <span class="invalid-feedback" role="alert">
+            <strong>{{ $errors }}</strong>
+            </span>
+            @enderror
+          </p>
 
           <form action="{{route('login')}}" method="POST">
             @csrf
             <div class="input-group mb-3">
-                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email">
+                <input id="email" type="email" class="form-control @if($errors->has('email')) is-invalid @endif" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email">
               <div class="input-group-append">
                 <div class="input-group-text">
                   <span class="fas fa-envelope"></span>
-                  @error('email')
-                     <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                       </span>
-                 @enderror
                 </div>
               </div>
             </div>
             <div class="input-group mb-3">
-                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Password">
+                <input id="password" type="password" class="form-control @if($errors->has('password')) is-invalid @endif" name="password" required autocomplete="current-password" placeholder="Password">
               <div class="input-group-append">
                 <div class="input-group-text">
                   <span class="fas fa-lock"></span>
-                  @error('password')
-                  <span class="invalid-feedback" role="alert">
-                     <strong>{{ $message }}</strong>
-                    </span>
-              @enderror
                 </div>
               </div>
             </div>
