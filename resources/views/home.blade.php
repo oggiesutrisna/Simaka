@@ -1,25 +1,23 @@
 @extends('layouts.admin')
-@section('title') Dashboard @endsection
+@section('title') Home @endsection
 @section('content')
 <div class="row">
   <div class="col-lg-3 col-6">
     <div class="small-box bg-info">
       <div class="inner">
-        <h3>{{$count = DB::table('karyawans')->count()}}</h3>
-        <p>Total Karyawan</p>
+        <h3>Drip</h3>
+        <p>Total Calon Karyawan</p>
       </div>
       <div class="icon">
         <i class="fas fa-users"></i>
       </div>
     </div>
   </div>
-  <!-- ./col -->
   <div class="col-lg-3 col-6">
-    <!-- small box -->
     <div class="small-box bg-success">
       <div class="inner">
         <h3>{{$count = DB::table('register_karyawans')->count()}}</h3>
-        <p>Pelamar Baru</p>
+        <p>Total Calon Karyawan Baru</p>
       </div>
       <div class="icon">
         <i class="fas fa-user-tie"></i>
@@ -46,7 +44,7 @@
         <p>Total Karyawan telah diterima</p>
       </div>
       <div class="icon">
-        <i class="ion ion-pie-graph"></i>
+        <i class="fas fa-compress"></i>
       </div>
     </div>
   </div>
@@ -57,8 +55,10 @@
     <h3> Selamat Datang </h3>
   </div>
   <div class="card-body">
-      Message from developers to Everyone <b> Experience is the name everyone gives to their mistakes.</b>
+      Message from Developers : <b> Experience is the name everyone gives to their mistakes.</b>
+  </div>
+  <div class="card-footer">
+      Logout
   </div>
 </div>
-
 @endsection

@@ -4,18 +4,6 @@
 <div class="card">
   <div class="card-header">
     @include('partials.flash-message')
-    <div class="card-tools">
-        <div class="input-group input-group-sm" style="width: 150px;">
-            <form action="{{route('registerkaryawans.index')}}" method="GET" role="search">
-            <input type="text" name="search" class="form-control float-right" placeholder="Cari">
-            <div class="input-group-append">
-              <button type="submit" class="btn btn-default">
-                <i class="fas fa-search"></i>
-              </button>
-            </div>
-        </form>
-          </div>
-    </div>
   </div>
   <!-- /.card-header -->
   <div class="card-body table-responsive p-0">
@@ -51,8 +39,7 @@
             <td>
               <div class="btn-group">
                 <a href="{{ route('registerkaryawans.show', $rk->id) }}" type="button" class="btn btn-primary">
-                  <i class="fas fa-search"></i>
-                  <a href="{{ route('registerkaryawans.edit', $rk->id ) }}" type="button" class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                  <i class="fas fa-search"></i></a>
                   <button type="submit" class="btn btn-danger delete-button">
                     <i class="fas fa-trash"></i>
                   </button>
@@ -71,11 +58,6 @@
           @endforelse
         </tbody>
       </table>
-      <div class="card-footer clearfix">
-        <ul class="pagination pagination-sm m-0 float-right">
-            {!! $registerkaryawans->links() !!}
-        </ul>
-      </div>
     </div>
     <!-- /.card-body -->
   </div>

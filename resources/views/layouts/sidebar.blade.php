@@ -1,7 +1,6 @@
 <aside class="main-sidebar sidebar-dark-primary main-sidebar-custom elevation-4">
-  <!-- Brand Logo -->
   <a href="{{route('home')}}" class="brand-link">
-    <span class="brand-text font-weight-light">Dashboard</span>
+    <span class="brand-text font-weight-light">Simaka</span>
   </a>
 
   <div class="sidebar">
@@ -34,9 +33,7 @@
         </li>
       </ul>
     </nav>
-    <!-- /.sidebar-menu -->
   </div>
-  <!-- /.sidebar -->
   <div class="sidebar-custom">
     <a class="btn btn-success" href="{{ route('logout') }}"
     onclick="event.preventDefault();

@@ -4,15 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>
-      Your data is Verified
+      Your data is successfully delivered
 </title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="{{asset('assets/plugins/fontawesome-free/css/all.min.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/plugins/fontawesome-free/css/all.min.css')}}">
   <link rel="stylesheet" href="{{asset('assets/css/adminlte.min.css')}}">
   <link rel="stylesheet" href="{{asset('assets/plugins/sweetalert2/sweetalert2.min.css') }}">
+
 </head>
 <body class="register-page">
     <img src="{{asset('assets-dj/assets/img/oKUuTF4.png')}}" width="300px" height="100px"> <br />
@@ -20,7 +21,7 @@
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
                 <a href="https://www.unicare-clinic.com" class="h1">
-                    Success
+                    Successfully Delivered
                 </a>
             </div>
             <div class="card-body">
@@ -38,11 +39,14 @@
                         <i class="fas fa-home mr-2"></i>
                         Kembali
                     </a>
+                    <a href="/" class="btn btn-block btn-success">
+                        <i class="fas fa-undo mr-2"></i>
+                        Daftar Lagi
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-
 </body>
 <!-- jQuery -->
 <script src="{{asset('assets/plugins/jquery/jquery.min.js')}}"></script>

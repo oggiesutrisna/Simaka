@@ -1,8 +1,5 @@
 <?php
 
-
-use App\Http\Controllers\KaryawanController;
-use App\Http\Controllers\PostingController;
 use App\Http\Controllers\RegisterKaryawanController;
 use App\Http\Controllers\ValidateController;
 use Illuminate\Support\Facades\Auth;
@@ -28,8 +25,6 @@ Auth::routes();
 // Resource
 
 Route::prefix('auth')->group(function () {
-    Route::resource('postings', PostingController::class);
-    Route::resource('karyawans', KaryawanController::class);
 });
 Route::resource('registerkaryawans', RegisterKaryawanController::class);
 

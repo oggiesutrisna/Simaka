@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreRegisterKaryawanRequest;
+
 use App\Http\Requests\UpdateRegisterKaryawanRequest;
 use App\Models\RegisterKaryawan;
-
+use Illuminate\Http\Request;
 
 class RegisterKaryawanController extends Controller
 {
@@ -16,8 +16,7 @@ class RegisterKaryawanController extends Controller
      */
     public function index(RegisterKaryawan $request)
     {
-        // $registerkaryawans = RegisterKaryawan::paginate(10);
-        $registerkaryawans = RegisterKaryawan::orderBy('id', 'DESC')->paginate(5);
+        $registerkaryawans = RegisterKaryawan::orderBy('id', 'DESC')->get();
 
         return view('registerkaryawans.index', compact('registerkaryawans'));
     }
@@ -38,7 +37,7 @@ class RegisterKaryawanController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreRegisterKaryawanRequest $request)
+    public function store(Request $request)
     {
         $validatedData = $request->validate([
             'nama'              => 'required|max:255 ',
@@ -55,6 +54,7 @@ class RegisterKaryawanController extends Controller
             'bio'               => 'required|max:255',
             'waktu'             => 'required|max:255',
             'tempat'            => 'max:255',
+            'jadwal'            => 'max:255',
             'salary'            => 'required|max:255',
             'dapatinformasi'    => 'required|max:255',
         ]);

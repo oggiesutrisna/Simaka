@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title') Status Pelamar @endsection
+@section('title') Status Pelamar {{$registerkaryawan->nama}} @endsection
 @section('content')
 
 <div class="row">
@@ -12,7 +12,7 @@
       <div class="card card-primary card-outline">
         <div class="card-body box-profile">
             <div class="text-center">
-                <img class="profile-user-img img-fluid img-circle" src="{{asset('storage/'. $registerkaryawan->fotodiri)}}" alt="Foto Diri Pelamar" width="128" height="128">
+                <img class="profile-user-img img-fluid img-circle" src="{{asset('storage/'. $registerkaryawan->fotodiri)}}" alt="file tidak di upload" width="128" height="128">
             </div>
                 <h3 class="profile-username text-center">{{ $registerkaryawan->nama }}</h3>
                 <ul class="list-group list-group-unbordered mb-3">
@@ -34,7 +34,6 @@
                 <a href="{{route('registerkaryawans.edit', $registerkaryawan->id)}}" class="btn btn-primary btn-block"><b>Edit</b></a>
             </div>
         </div>
-
     </div>
     <div class="col-md-9">
       <div class="card">
@@ -83,10 +82,10 @@
             <div class="tab-pane" id="uploads">
               <div class="row mb-3">
                 <div class="col-sm-6">
-                  <img class="img-fluid" src="{{asset('storage/' . $registerkaryawan->filepdf)}}" alt="Photo" width="500" height="500">
+                  <img class="img-fluid" src="{{asset('storage/' . $registerkaryawan->filepdf)}}" alt="File tidak di upload" width="500" height="500">
                 </div>
                 <div class="col-sm-6">
-                    <img class="img-fluid" src="{{asset('storage/' . $registerkaryawan->screenshot)}}" alt="Photo" width="500" height="500">
+                    <img class="img-fluid" src="{{asset('storage/' . $registerkaryawan->screenshot)}}" alt="file tidak di upload" width="500" height="500">
                 </div>
               </div>
               <p>Klik kanan gambar untuk fullscreen.</p>

@@ -14,9 +14,9 @@ class AddFilepdfScreenshotToRegisterKaryawans extends Migration
     public function up()
     {
         Schema::table('register_karyawans', function (Blueprint $table) {
-            $table->string('filepdf')->nullable();
-            $table->string('screenshot')->nullable();
-            $table->string('fotodiri')->nullable();
+            $table->string('filepdf')->default('file tidak di upload');
+            $table->string('screenshot')->default('file tidak di upload');
+            $table->string('fotodiri')->default('file tidak di upload');
         });
     }
 
