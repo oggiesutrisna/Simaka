@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-
 use App\Http\Requests\UpdateRegisterKaryawanRequest;
 use App\Models\RegisterKaryawan;
 use Illuminate\Http\Request;
+
+// model yang digunakan adalah model RegisterKaryawan.php
+// fungsi controller agar bisa membuat, mengubah, menghapus, dan menampilkan
 
 class RegisterKaryawanController extends Controller
 {
@@ -14,10 +16,11 @@ class RegisterKaryawanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    // menampilkan isi dari data yang sudah dibuat dengan menampilkan tabel
     public function index(RegisterKaryawan $request)
     {
-        $registerkaryawans = RegisterKaryawan::orderBy('id', 'DESC')->get();
-
+        $registerkaryawans = RegisterKaryawan::orderBy('id', 'DESC')->paginate(10);
         return view('registerkaryawans.index', compact('registerkaryawans'));
     }
 
@@ -26,6 +29,8 @@ class RegisterKaryawanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    // fungsi untuk menampilkan view create (membuat)
     public function create()
     {
         return view('registerkaryawans.create');
@@ -37,6 +42,9 @@ class RegisterKaryawanController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    // fungsi untuk perintah menyimpan ke database
+    // fungsi store menggunakan validasi agar data yang akan dimasukkan sudah benar sesuai dengan prosedur dari index.blade.php
     public function store(Request $request)
     {
         $validatedData = $request->validate([
@@ -58,6 +66,13 @@ class RegisterKaryawanController extends Controller
             'salary'            => 'required|max:255',
             'dapatinformasi'    => 'required|max:255',
         ]);
+
+        // fungsi saat attach file,
+        // di fungsi ini ada 3
+        // screenshot tampilan, filepdf, dan foto diri
+        // setelah diisi oleh user, semua attachment pindah ke folder masing masing,
+        // agar bisa ditampilkan saat admin melihat attachment menu di bagian show.
+        // untuk bisa menggunakan attachment dan bisa ditampilkan, di laravel perlu generate command "php artisan storage:link"
 
         if ($request->file('filepdf')) {
             $validatedData['filepdf'] = $request->file('filepdf')->store('images');
@@ -81,6 +96,8 @@ class RegisterKaryawanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+    // fungsi menampilkan data
     public function show(RegisterKaryawan $registerkaryawan)
     {
         return view('registerkaryawans.show', compact('registerkaryawan'));
@@ -92,6 +109,7 @@ class RegisterKaryawanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    // fungsi untuk edit, dengan menampilkan satu tabel yang akan di tampilkan
     public function edit(RegisterKaryawan $registerkaryawan)
     {
         return view('registerkaryawans.edit', compact('registerkaryawan'));
@@ -104,6 +122,7 @@ class RegisterKaryawanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    // fungsi untuk update atau fungsi mengubah data
     public function update(UpdateRegisterKaryawanRequest $request, RegisterKaryawan $registerkaryawan)
     {
         $registerkaryawan->update($request->all());
@@ -116,6 +135,7 @@ class RegisterKaryawanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    // fungsi untuk menghapus data
     public function destroy(RegisterKaryawan $registerkaryawan)
     {
         $registerkaryawan->delete();

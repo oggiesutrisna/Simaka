@@ -11,8 +11,10 @@ class CreateRegisterKaryawansTable extends Migration
      *
      * @return void
      */
+
+    // membuat migrasi untuk table register_karyawans dengan nama table register_karyawans
     public function up()
-{
+    {
         Schema::create('register_karyawans', function (Blueprint $table) {
             $table->id();
             $table->string('nama');

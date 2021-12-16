@@ -58,7 +58,7 @@
       Message from Developers : <b> Experience is the name everyone gives to their mistakes.</b>
   </div>
   <div class="card-footer">
-      Logout
+      Today is SKSK
   </div>
 </div>
 @endsection

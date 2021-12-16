@@ -16,7 +16,7 @@
 </head>
 <body class="hold-transition register-page">
     <div class="register-logo"> <br/>
-        <a href="{{route('home')}}"><b>Unicare</b> Hirings</a>
+        <a href="{{route('home')}}"><b>Unicare</b>Hirings</a>
     </div>
     <div class="card card-body register-card-body card-outline card-primary">
         {{-- Error Span --}}
@@ -30,8 +30,9 @@
         </div>
         @endif
         {{-- End Error Span --}}
-        <p class="login-box-msg"><strong>Pastikan data yang anda masukkan sudah benar dan so pasti!</strong></p>
+        <p class="login-box-msg"><strong>Pastikan data yang anda masukkan sudah benar</strong></p>
         <!-- /.card-header -->
+        {{-- Form Input Data --}}
         <form action="{{ route('registerkaryawans.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="card-body">
@@ -197,7 +198,7 @@
                 <button type="button" data-toggle="modal" data-target="#modal-default" class="btn bg-gradient-primary">Submit Lamaran Anda</button>
             </div>
         </div> <br />
-        <p>Copyright &copy; 2021 <a href="https://www.unicare-clinic.com">Syntak by Unicare</a> | Built with 💖 by <a href="https://twitter.com/@oggiesutrisna">Oggie Sutrisna</a></p>
+        <p>Copyright &copy; 2021 | Built with 💖 by <a href="https://twitter.com/@oggiesutrisna">Oggie Sutrisna</a></p>
 
         <div class="modal fade" id="modal-default" style="display: none;" aria-hidden="true">
             <div class="modal-dialog">

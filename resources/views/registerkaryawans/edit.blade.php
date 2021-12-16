@@ -97,22 +97,22 @@
                     <div class="form-group">
                         <label>Rencana Penempatan</label>
                         <select class="form-control" name="tempat">
-                            <option value="Head Office">Head Office Hydro & Unicare </option>
-                            <option value="Hydro Canggu">Klinik Hydromedical Canggu</option>
-                            <option value="Hydro Batubelig Baru">Klinik Hydromedical Batubelig Baru</option>
-                            <option value="Hydro Batubelig Lama">Klinik Unicare Tambolaka</option>
-                            <option value="Unicare Uluwatu">Klinik Unicare Uluwatu</option>
-                            <option value="Unicare Ubud">Klinik Unicare Ubud</option>
-                            <option value="Unicare Tambolaka">Klinik Unicare Tambolaka</option>
-                            <option value="Unicare Kupang">Klinik Unicare Kupang</option>
-                            <option value="Drive-Thru Central Parkir Kuta">[Drive Thru] Central Parkir Kuta </option>
-                            <option value="Unicare Ibis Petitenget">[Drive Thru] Unicare Drive Thru Ibis Petitenget</option>
-                            <option value="Unicare New Kuta Golf">[Drive Thru] Unicare Drive Thru New Kuta Golf</option>
-                            <option value="Unicare Villa Jerami">[Drive Thru] Unicare Drive Thru Villa Jerami</option>
-                            <option value="Unicare Central Parkir">[Drive Thru] Unicare Drive Thru Central Parkir</option>
-                            <option value="Unicare Drive Thru BSMC">[Drive Thru] Drive Thru BSMC </option>
-                            <option value="Unicare Drive Thru CHIS">[Drive Thru] Drive Thru CHIS </option>
-                            <option value="Unicare Drive Thru Padang Sambian">[Drive Thru] Drive Thru Padang Sambian </option>
+                            <option value="Head Office">Head Office Hydro & Unicare, Bali</option>
+                            <option value="Hydro Canggu">Klinik Hydromedical Canggu, Bali</option>
+                            <option value="Hydro Batubelig Baru">Klinik Hydromedical Batubelig Baru, Bali</option>
+                            <option value="Hydro Batubelig Lama">Klinik Hydromedical Batubelig Lama, Bali</option>
+                            <option value="Unicare Uluwatu">Klinik Unicare Uluwatu, Bali</option>
+                            <option value="Unicare Ubud">Klinik Unicare Ubud, Bali</option>
+                            <option value="Unicare Tambolaka">Klinik Unicare Tambolaka, NTT</option>
+                            <option value="Unicare Kupang">Klinik Unicare Kupang, NTT</option>
+                            <option value="Drive-Thru Central Parkir Kuta">[Drive Thru] Central Parkir Kuta, Bali </option>
+                            <option value="Unicare Ibis Petitenget">[Drive Thru] Unicare Drive Thru Ibis Petitenget, Bali</option>
+                            <option value="Unicare New Kuta Golf">[Drive Thru] Unicare Drive Thru New Kuta Golf, Bali</option>
+                            <option value="Unicare Villa Jerami">[Drive Thru] Unicare Drive Thru Villa Jerami, Bali</option>
+                            <option value="Unicare Central Parkir">[Drive Thru] Unicare Drive Thru Central Parkir, Bali</option>
+                            <option value="Unicare Drive Thru BSMC">[Drive Thru] Drive Thru BSMC, Bali</option>
+                            <option value="Unicare Drive Thru CHIS">[Drive Thru] Drive Thru CHIS, Bali</option>
+                            <option value="Unicare Drive Thru Padang Sambian">[Drive Thru] Drive Thru Padang Sambian, Bali </option>
                         </select>
                     </div>
                 </div>

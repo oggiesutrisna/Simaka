@@ -3,11 +3,24 @@
 @section('content')
 <div class="card">
   <div class="card-header">
+      {{-- fungsi untuk menampilkan flash message jika terjadi error pada input --}}
     @include('partials.flash-message')
+    {{-- end fungsi untuk menampilkan flash message jika terjadi error pada input --}}
+    <a href="{{route('registerkaryawans.create')}}" class="btn btn-block btn-primary">Tambah Data Pelamar</a>
+    <div class="card-tools">
+        <div class="input-group input-group-sm" style="width: 150px;">
+            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-default">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+        </div>
+    </div>
   </div>
   <!-- /.card-header -->
   <div class="card-body table-responsive p-0">
-    <table class="table table-bordered table-hover text-nowrap">
+    <table class="table table-stripped text-nowrap">
       <thead>
         <tr>
           <th>#</th>
@@ -20,6 +33,7 @@
         </tr>
       </thead>
       <tbody>
+          {{-- isi dari tabel --}}
         @forelse($registerkaryawans as $rk)
         <tr>
           <td>{{ $rk->id }}</td>
@@ -27,12 +41,15 @@
           <td>{{ $rk->ttl }}</td>
           <td>{{ $rk->email}} </td>
           <td>{{ $rk->tempat }}</td>
+          {{-- end isi dari tabel  --}}
+          {{-- fungsi actions --}}
           <td>
               <span class="badge badge-{{ $rk->diterima === 'belum diterima' ? 'danger' : 'success'}} px-3 py-3" data-toggle="tooltip" data-placement="top" title="{{ $rk->diterima }}">
                 <i class="fas {{ $rk->diterima === 'belum diterima' ? 'fa-minus-circle' : 'fa-minus-circle'}}">
                 </i>
             </span>
           </td>
+          {{-- fungsi delete tabel --}}
           <form action="{{route('registerkaryawans.destroy', $rk->id )}}" method="POST" id="form">
             @csrf
             @method('DELETE')

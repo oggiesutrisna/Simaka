@@ -26,9 +26,8 @@ Auth::routes();
 
 Route::prefix('auth')->group(function () {
 });
+// fungsi route resource agar saat perintah create update delete tidak memanggil fungsi di bagian controller.
 Route::resource('registerkaryawans', RegisterKaryawanController::class);
-
 // Get
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('validate', [ValidateController::class, 'submitRequest'])->name('validate');
