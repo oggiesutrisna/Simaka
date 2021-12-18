@@ -6,8 +6,8 @@
   <title>Hirings Section</title>
   <!-- Google Font: Source Sans Pro -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/all.min.css')}}">
   <!-- Theme style -->
@@ -16,7 +16,7 @@
 </head>
 <body class="hold-transition register-page">
     <div class="register-logo"> <br/>
-        <a href="{{route('home')}}"><b>Unicare</b>Hirings</a>
+        <a href="{{route('home')}}"><b>Unicare </b>Hirings</a>
     </div>
     <div class="card card-body register-card-body card-outline card-primary">
         {{-- Error Span --}}
@@ -172,7 +172,7 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Upload Foto Diri*</label>
-                            <input type="file" name="fotodiri" class="form-control @if($errors->has('fotodiri')) is-invalid @endif" accept="image/*" id="fotodiri" required>
+                            <input type="file" accept="image/*" name="fotodiri" class="form-control @if($errors->has('fotodiri')) is-invalid @endif" accept="image/*" id="fotodiri" required>
                         </div>
                     </div>
                     <div class="col-sm-6">
@@ -213,8 +213,8 @@
                   <p>Sebelum anda mensubmit, ada baiknya anda membaca ketentuan dari kami terlebih dahulu</p>
                   <p>1. Aplikasi ini adalah resmi dari <b>Syntak</b> oleh Unicare Clinic dibuat oleh <a href="https://twitter.com/@oggiesutrisna">Oggie Sutrisna </a>Siapapun yang meniru, mengambil, mencuri, hacking, atau bypass yang membuat merugikan, kami tidak segan melapor ke pihak berwajib.</p>
                   <p>2. Semua file yang anda ajukan atau unggah ke aplikasi kami dijamin 100% aman dan telah di enkripsi. Kami pastikan data anda terjamin dan kami tidak akan mendistribusikan semua file apapun yang anda submit di aplikasi kami kemanapun. Karena data anda adalah data privacy.</p>
-                  <p>3. Pastikan data yang diperlukan sudah lengkap agar anda cepat mudah mendapatkan interview.</p>
-                  <p>4. Pastikan di bagian <b>no telepon aktif</b>, gunakan <b>+628</b> diawal saat anda mencantumkan nomor telepon aktif anda.</p>
+                  <p>3. Pastikan data yang diperlukan sudah lengkap agar anda cepat mudah dipanggil untuk interview.</p>
+                  <p>4. Pastikan di bagian <b>No telepon aktif</b>, gunakan <b>+62</b> diawal saat anda mencantumkan nomor telepon aktif anda.</p>
                 </div>
                 <div class="modal-footer justify-content-between">
                   <button type="submit" aria-label="close" class="btn btn-primary">Submit Lamaran Anda</button>

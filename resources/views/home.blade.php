@@ -1,11 +1,11 @@
 @extends('layouts.admin')
-@section('title') Home @endsection
+@section('title') Welcome @endsection
 @section('content')
 <div class="row">
   <div class="col-lg-3 col-6">
     <div class="small-box bg-info">
       <div class="inner">
-        <h3>Drip</h3>
+        <h3>{{$count = DB::table('register_karyawans')->count()}}</h3>
         <p>Total Calon Karyawan</p>
       </div>
       <div class="icon">
@@ -58,7 +58,8 @@
       Message from Developers : <b> Experience is the name everyone gives to their mistakes.</b>
   </div>
   <div class="card-footer">
-      Today is SKSK
+       {{-- make date and time format longer --}}
+      Today is <b> {{ date('l, d F Y')  }} </b> Time : {{ date('h : i : s A') }} : <b> GMT </b> : {{ date('P') }}
   </div>
 </div>
 @endsection

@@ -6,16 +6,8 @@
       {{-- fungsi untuk menampilkan flash message jika terjadi error pada input --}}
     @include('partials.flash-message')
     {{-- end fungsi untuk menampilkan flash message jika terjadi error pada input --}}
-    <a href="{{route('registerkaryawans.create')}}" class="btn btn-block btn-primary">Tambah Data Pelamar</a>
     <div class="card-tools">
-        <div class="input-group input-group-sm" style="width: 150px;">
-            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-            <div class="input-group-append">
-              <button type="submit" class="btn btn-default">
-                <i class="fas fa-search"></i>
-              </button>
-            </div>
-        </div>
+        <a href="{{ route('registerkaryawans.create') }}" class="btn btn-block btn-primary">Tambah Data Pelamar</a>
     </div>
   </div>
   <!-- /.card-header -->

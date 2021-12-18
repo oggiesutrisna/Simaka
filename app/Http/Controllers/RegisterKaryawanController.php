@@ -18,7 +18,7 @@ class RegisterKaryawanController extends Controller
      */
 
     // menampilkan isi dari data yang sudah dibuat dengan menampilkan tabel
-    public function index(RegisterKaryawan $request)
+    public function index(Request $request)
     {
         $registerkaryawans = RegisterKaryawan::orderBy('id', 'DESC')->paginate(10);
         return view('registerkaryawans.index', compact('registerkaryawans'));
@@ -77,11 +77,9 @@ class RegisterKaryawanController extends Controller
         if ($request->file('filepdf')) {
             $validatedData['filepdf'] = $request->file('filepdf')->store('images');
         }
-
         if ($request->file('screenshot')) {
             $validatedData['screenshot'] = $request->file('screenshot')->store('screenshot');
         }
-
         if ($request->file('fotodiri')) {
             $validatedData['fotodiri'] = $request->file('fotodiri')->store('fotodiri');
         }
@@ -122,6 +120,7 @@ class RegisterKaryawanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     // fungsi untuk update atau fungsi mengubah data
     public function update(UpdateRegisterKaryawanRequest $request, RegisterKaryawan $registerkaryawan)
     {

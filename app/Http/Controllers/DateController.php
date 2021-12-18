@@ -6,8 +6,9 @@ use Carbon\Carbon;
 
 class DateController extends Controller
 {
-    public function datetime()
+    public function date()
     {
-        Carbon::now();
+        $date = Carbon::now();
+        return view('date', compact('date'));
     }
 }
